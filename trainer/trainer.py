@@ -1,4 +1,5 @@
 from utils import plot
+from writer import writer
 import torch.nn as nn
 import torch.optim as optim
 import torch
@@ -10,6 +11,7 @@ class Trainer():
         self.loss_name = args.loss_name
         self.optimizer_name = args.optimizer_name
         self.lr_rate = args.lr_rate
+        self.writer = writer.create_writer(args)
         self.init_loss()
         self.init_optimizer()
     
@@ -108,6 +110,8 @@ class Trainer():
             results["val_loss"].append(val_loss)
             results["val_acc"].append(val_acc)
 
+            # Writer to tensorboard
+            writer.writer_to_tensorboard(results, epoch, self.writer)
         # 6. Return the filled results at the end of the epochs
         return results
 
@@ -132,4 +136,6 @@ class Trainer():
         # Concatenate list of predictions into a tensor
         y_pred_tensor = torch.cat(y_preds)
         plot.plot_confusion(y_pred_tensor, test_data, class_names)
+
+    
 
