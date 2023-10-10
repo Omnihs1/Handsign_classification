@@ -10,6 +10,7 @@ class Trainer():
         self.model = args.model
         self.loss_name = args.loss_name
         self.optimizer_name = args.optimizer_name
+        self.weight_decay = args.weight_decay
         self.lr_rate = args.lr_rate
         self.writer = writer.create_writer(args)
         self.init_loss()
@@ -21,7 +22,8 @@ class Trainer():
     def init_optimizer(self):
         if (self.optimizer_name == "adam"):
             self.optimizer = optim.Adam(params = self.model.parameters(), 
-                                        lr=self.lr_rate)
+                                        lr=self.lr_rate,
+                                        weight_decay = self.weight_decay)
     def train_epoch(self, dataloader, device):
         self.model.train()
         train_loss, train_acc = 0, 0
