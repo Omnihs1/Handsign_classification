@@ -1,5 +1,6 @@
 from datetime import datetime
 import os
+import numpy as np
 from torch.utils.tensorboard import SummaryWriter
 def create_writer(args):
     
@@ -11,12 +12,12 @@ def create_writer(args):
 def writer_to_tensorboard(results, epoch, writer):
     # Add results to SummaryWriter
     writer.add_scalars(main_tag="Loss", 
-                    tag_scalar_dict={"train_loss": results.train_loss,
-                                        "test_loss": results.test_loss},
+                    tag_scalar_dict={"train_loss": results["train_loss"][-1],
+                                        "test_loss": results["val_loss"][-1]},
                     global_step=epoch)
     writer.add_scalars(main_tag="Accuracy", 
-                    tag_scalar_dict={"train_acc": results.train_acc,
-                                        "test_acc": results.test_acc}, 
+                    tag_scalar_dict={"train_acc": results["train_acc"][-1],
+                                        "test_acc": results["val_acc"][-1]}, 
                     global_step=epoch)
 
     # Close the writer

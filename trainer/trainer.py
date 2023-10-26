@@ -15,7 +15,7 @@ class Trainer():
         self.writer = writer.create_writer(args)
         self.init_loss()
         self.init_optimizer()
-    
+        self.init_device()
     def init_loss(self):
         if (self.loss_name == "cross_entropy"):
             self.loss = nn.CrossEntropyLoss() 
@@ -24,6 +24,9 @@ class Trainer():
             self.optimizer = optim.Adam(params = self.model.parameters(), 
                                         lr=self.lr_rate,
                                         weight_decay = self.weight_decay)
+    def init_device(self):
+        # self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        self.device = "cpu"
     def train_epoch(self, dataloader, device):
         self.model.train()
         train_loss, train_acc = 0, 0
@@ -41,7 +44,7 @@ class Trainer():
             self.optimizer.zero_grad()
 
             # Loss backward
-            self.loss.backward()
+            loss.backward()
 
             # Optimizer step
             self.optimizer.step()
@@ -91,15 +94,15 @@ class Trainer():
             "val_loss": [],
             "val_acc": []
         }
-        device = "cuda" if torch.cuda.is_available() else "cpu"
+        
         # 3. Loop through training and testing steps for a number of epochs
         for epoch in tqdm(range(epochs)):
-            train_loss, train_acc = self.train_epoch(dataloader = train_dataloader, device = device)
-            val_loss, val_acc = self.test_epoch(dataloader=test_dataloader, device=device)
+            train_loss, train_acc = self.train_epoch(dataloader = train_dataloader, device = self.device)
+            val_loss, val_acc = self.test_epoch(dataloader=test_dataloader, device=self.device)
             
             # 4. Print out what's happening
             print(
-                f"Epoch: {epoch+1} | "
+                f"\nEpoch: {epoch+1} | "
                 f"train_loss: {train_loss:.4f} | "
                 f"train_acc: {train_acc:.4f} | "
                 f"test_loss: {val_loss:.4f} | "

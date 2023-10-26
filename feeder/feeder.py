@@ -4,6 +4,7 @@ from torch.utils.data import Dataset
 from pathlib import Path
 import numpy as np
 import pickle 
+import random
 
 # Class read npy and pickle file to make data and label in couple
 class FeederINCLUDE(Dataset):
@@ -45,9 +46,16 @@ class FeederINCLUDE(Dataset):
         T : numbers of frames
         label : label of videos
         """
-        data = np.squeeze(np.array(self.data_path[index]))
+        data_numpy = np.squeeze(np.array(self.data[index]))
         label = self.label[index]
-        return data, label
+        return data_numpy, label
     
     def __len__(self):
         return len(self.label_path)
+    
+if __name__ == '__main__':
+    data = FeederINCLUDE(data_path="data/npy_train.npy", label_path="data/label_train.pickle")
+    print(data.N, data.C, data.V, data.T, data.M)
+    rd_number = random.randint(0, 2860)
+    a, label = data.__getitem__(rd_number)
+    print(a.shape)

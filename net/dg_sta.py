@@ -38,7 +38,8 @@ class PositionalEncoding(nn.Module):
                              -(math.log(10000.0) / ft_size))
         pe[:, 0::2] = torch.sin(position * div_term)
         pe[:, 1::2] = torch.cos(position * div_term)
-        pe = pe.unsqueeze(0).cuda()
+        # pe = pe.unsqueeze(0).cuda()
+        pe = pe.unsqueeze(0)
         self.register_buffer('pe', pe)
 
     def forward(self, x):
@@ -115,8 +116,10 @@ class MultiHeadedAttention(nn.Module):
 
 
         I = torch.eye(self.time_len * self.joint_num)
-        s_mask = Variable((1 - t_mask)).cuda()
-        t_mask = Variable(t_mask + I).cuda()
+        # s_mask = Variable((1 - t_mask)).cuda()
+        # t_mask = Variable(t_mask + I).cuda()
+        s_mask = Variable((1 - t_mask))
+        t_mask = Variable(t_mask + I)
         return t_mask, s_mask
 
 
@@ -237,9 +240,10 @@ class DG_STA(nn.Module):
 
         
 
-    def forward(self, x):
-        # input shape: [batch_size, time_len, joint_num, channels]
-
+    def forward(self, x):  
+        # input initial : [batch_size, channels, time_len, joint_num]
+        # input shape need: [batch_size, time_len, joint_num, channels]
+        x = x.permute(0, 2, 3, 1)
         time_len = x.shape[1]
         joint_num = x.shape[2]
         #reshape x
@@ -247,20 +251,20 @@ class DG_STA(nn.Module):
         
         #input map
         x = self.input_map(x)
-        print("Done 1 ")
+        # print("Done 1 ")
         #spatal
         x = self.s_att(x)
-        print("Done 2 ")
+        # print("Done 2 ")
         #temporal
         x = self.t_att(x)
-        print("Done 3 ")
+        # print("Done 3 ")
         x = x.sum(1) / x.shape[1]
         pred = self.cls(x)
-        print("Done 4 ")
+        # print("Done 4 ")
         return pred
     
 if __name__ == "__main__":
     model = DG_STA(num_channels= 2, num_classes = 20, dp_rate = 0.2, 
                 time_len=80, joint_num=25)
-    summary(model, input_size=(8, 80, 25, 2), 
+    summary(model, input_size=(1, 2, 80, 25), 
             col_names=["input_size", "output_size", "num_params"])

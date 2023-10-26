@@ -1,3 +1,11 @@
 chua loss
 chua optimizer
 chua schedule lr
+chua regularization
+chua early stopping
+chua hyperparameter tuning
+chua dropout
+chua batch normalization
+chua cac metrics : precision, recall. confusion matrix
+co the ap dung transfer learning
+chua cac lr khac nhau
