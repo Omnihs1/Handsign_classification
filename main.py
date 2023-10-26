@@ -16,8 +16,9 @@ class Arg():
         self.batch_size = args["batch_size"]
 if __name__ == '__main__':
     device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(device)
     model = DG_STA(num_channels= 2, num_classes = 263, dp_rate = 0.2,
-                   time_len=80, joint_num=25)
+                   time_len=80, joint_num=25).to(device)
     # model = Model(2, 263, graph_args = {"layout" :"mediapipe"}, edge_importance_weighting=False).to(device)
     args = {"experiment_name" : "INCLUDE_CLASSIFICATION",
             "model_name" : "DG_STA",

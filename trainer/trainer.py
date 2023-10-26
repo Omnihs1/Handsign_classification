@@ -25,8 +25,7 @@ class Trainer():
                                         lr=self.lr_rate,
                                         weight_decay = self.weight_decay)
     def init_device(self):
-        # self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.device = "cpu"
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
     def train_epoch(self, dataloader, device):
         self.model.train()
         train_loss, train_acc = 0, 0
