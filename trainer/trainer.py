@@ -1,9 +1,10 @@
 from utils import plot
 from writer import writer
+from metrics.accuracy import Accuracy
 import torch.nn as nn
 import torch.optim as optim
 import torch
-from tqdm import tqdm
+from tqdm.auto import tqdm
 
 class Trainer():
     def __init__(self, args):
@@ -12,7 +13,8 @@ class Trainer():
         self.optimizer_name = args.optimizer_name
         self.weight_decay = args.weight_decay
         self.lr_rate = args.lr_rate
-        self.writer = writer.create_writer(args)
+        self.epochs = args.epochs
+        self.writer = writer.init_wandb(args)
         self.init_loss()
         self.init_optimizer()
         self.init_device()
@@ -25,16 +27,18 @@ class Trainer():
                                         lr=self.lr_rate,
                                         weight_decay = self.weight_decay)
     def init_device(self):
-        # self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        self.device = "cpu"
+        self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        # self.device = "cpu"
     def train_epoch(self, dataloader, device):
         self.model.train()
         train_loss, train_acc = 0, 0
+        # print(len(dataloader))
         for batch, (X, y) in enumerate(dataloader):
             X, y = X.to(device), y.to(device)
             
             # Forward pass
             y_pred = self.model(X)
+            # print("truth", y)
 
             # Calculate loss
             loss = self.loss(y_pred, y)
@@ -51,8 +55,10 @@ class Trainer():
 
             # Calculate accuracy by select the biggest probability in each row
             y_pred_class = torch.argmax(torch.softmax(y_pred, dim=1), dim=1)
-            train_acc += (y_pred_class == y).sum().item()/len(y_pred)
-        
+            # print("pred", y_pred_class)
+            train_acc += Accuracy(y_pred_class, y).item()
+            # print(batch)
+    
         train_loss = train_loss / len(dataloader)
         train_acc = train_acc / len(dataloader)
         return train_loss, train_acc
@@ -80,23 +86,23 @@ class Trainer():
                 
                 # Calculate and accumulate accuracy
                 test_pred_labels = test_pred_logits.argmax(dim=1)
-                test_acc += ((test_pred_labels == y).sum().item()/len(test_pred_labels))
+                test_acc += Accuracy(test_pred_labels, y).item()
                 
         # Adjust metrics to get average loss and accuracy per batch 
         test_loss = test_loss / len(dataloader)
         test_acc = test_acc / len(dataloader)
         return test_loss, test_acc
     
-    def train(self, epochs, train_dataloader, test_dataloader):
+    def train(self, train_dataloader, test_dataloader):
         # 2. Create empty results dictionary
         results = {"train_loss": [],
             "train_acc": [],
             "val_loss": [],
             "val_acc": []
         }
-        
+        # print(len(train_dataloader))
         # 3. Loop through training and testing steps for a number of epochs
-        for epoch in tqdm(range(epochs)):
+        for epoch in tqdm(range(self.epochs), total=self.epochs):
             train_loss, train_acc = self.train_epoch(dataloader = train_dataloader, device = self.device)
             val_loss, val_acc = self.test_epoch(dataloader=test_dataloader, device=self.device)
             
@@ -116,9 +122,15 @@ class Trainer():
             results["val_acc"].append(val_acc)
 
             # Writer to tensorboard
-            writer.writer_to_tensorboard(results, epoch, self.writer)
+            writer.writer_to_wandb(results, epoch, self.writer)
+            
         # 6. Return the filled results at the end of the epochs
+        writer.end()
         return results
+    
+    def save_model(self, path):
+        # Save the model's state dictionary
+        torch.save(self.model.state_dict(), path)
 
     def plot_loss_accuracy(self, results):
         plot.plot_curve(results)

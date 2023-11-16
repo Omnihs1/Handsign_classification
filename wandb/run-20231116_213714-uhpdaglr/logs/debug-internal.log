@@ -1,0 +1,197 @@
+2023-11-16 21:37:14,609 INFO    StreamThr :36812 [internal.py:wandb_internal():86] W&B internal server running at pid: 36812, started at: 2023-11-16 21:37:14.609096
+2023-11-16 21:37:14,610 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: status
+2023-11-16 21:37:14,614 INFO    WriterThread:36812 [datastore.py:open_for_write():85] open: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\run-uhpdaglr.wandb
+2023-11-16 21:37:14,614 DEBUG   SenderThread:36812 [sender.py:send():380] send: header
+2023-11-16 21:37:14,615 DEBUG   SenderThread:36812 [sender.py:send():380] send: run
+2023-11-16 21:37:15,745 INFO    SenderThread:36812 [dir_watcher.py:__init__():211] watching files in: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files
+2023-11-16 21:37:15,747 INFO    SenderThread:36812 [sender.py:_start_run_threads():1124] run started: uhpdaglr with start time 1700145434.611098
+2023-11-16 21:37:15,860 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: check_version
+2023-11-16 21:37:15,861 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: check_version
+2023-11-16 21:37:16,534 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: run_start
+2023-11-16 21:37:16,571 DEBUG   HandlerThread:36812 [system_info.py:__init__():32] System info init
+2023-11-16 21:37:16,571 DEBUG   HandlerThread:36812 [system_info.py:__init__():47] System info init done
+2023-11-16 21:37:16,571 INFO    HandlerThread:36812 [system_monitor.py:start():194] Starting system monitor
+2023-11-16 21:37:16,572 INFO    SystemMonitor:36812 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-16 21:37:16,572 INFO    HandlerThread:36812 [system_monitor.py:probe():214] Collecting system info
+2023-11-16 21:37:16,583 INFO    SystemMonitor:36812 [interfaces.py:start():190] Started cpu monitoring
+2023-11-16 21:37:16,583 INFO    SystemMonitor:36812 [interfaces.py:start():190] Started disk monitoring
+2023-11-16 21:37:16,584 INFO    SystemMonitor:36812 [interfaces.py:start():190] Started gpu monitoring
+2023-11-16 21:37:16,601 INFO    SystemMonitor:36812 [interfaces.py:start():190] Started memory monitoring
+2023-11-16 21:37:16,615 INFO    SystemMonitor:36812 [interfaces.py:start():190] Started network monitoring
+2023-11-16 21:37:16,628 DEBUG   HandlerThread:36812 [system_info.py:probe():196] Probing system
+2023-11-16 21:37:16,629 DEBUG   HandlerThread:36812 [gitlib.py:_init_repo():56] git repository is invalid
+2023-11-16 21:37:16,629 DEBUG   HandlerThread:36812 [system_info.py:probe():244] Probing system done
+2023-11-16 21:37:16,629 DEBUG   HandlerThread:36812 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.11.3', 'heartbeatAt': '2023-11-16T14:37:16.628118', 'startedAt': '2023-11-16T14:37:14.601037', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'd:\\AI\\Skills\\Paper\\handsign_classification\\main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'host': 'LAPTOP-RFE8LCHG', 'username': 'asus', 'executable': 'C:\\Users\\asus\\miniconda3\\envs\\projectAI\\python.exe', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3201.0, 'min': 0.0, 'max': 3201.0}, 'cpu_freq_per_core': [{'current': 3201.0, 'min': 0.0, 'max': 3201.0}], 'disk': {'/': {'total': 325.29003524780273, 'used': 198.54909133911133}}, 'gpu': 'NVIDIA GeForce RTX 3050 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3050 Laptop GPU', 'memory_total': 4294967296}], 'memory': {'total': 15.405651092529297}}
+2023-11-16 21:37:16,629 INFO    HandlerThread:36812 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-16 21:37:16,629 INFO    HandlerThread:36812 [system_monitor.py:probe():227] Publishing system info
+2023-11-16 21:37:16,629 DEBUG   HandlerThread:36812 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-16 21:37:16,630 DEBUG   HandlerThread:36812 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-16 21:37:16,630 DEBUG   HandlerThread:36812 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-11-16 21:37:16,632 ERROR   gpu       :36812 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 21:37:16,749 INFO    Thread-16 :36812 [dir_watcher.py:_on_file_created():271] file/dir created: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\requirements.txt
+2023-11-16 21:37:16,749 INFO    Thread-16 :36812 [dir_watcher.py:_on_file_created():271] file/dir created: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\conda-environment.yaml
+2023-11-16 21:37:18,643 ERROR   gpu       :36812 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 21:37:20,669 ERROR   gpu       :36812 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 21:37:20,777 INFO    Thread-16 :36812 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\conda-environment.yaml
+2023-11-16 21:37:20,905 DEBUG   HandlerThread:36812 [system_info.py:_save_conda():87] Saving conda packages done
+2023-11-16 21:37:20,906 INFO    HandlerThread:36812 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-16 21:37:20,923 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 21:37:20,924 DEBUG   SenderThread:36812 [sender.py:send():380] send: files
+2023-11-16 21:37:20,924 INFO    SenderThread:36812 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2023-11-16 21:37:20,931 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 21:37:20,931 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 21:37:20,934 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 21:37:21,262 DEBUG   SenderThread:36812 [sender.py:send():380] send: telemetry
+2023-11-16 21:37:21,779 INFO    Thread-16 :36812 [dir_watcher.py:_on_file_created():271] file/dir created: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\wandb-metadata.json
+2023-11-16 21:37:22,718 ERROR   gpu       :36812 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 21:37:23,030 INFO    wandb-upload_0:36812 [upload_job.py:push():131] Uploaded file C:\Users\asus\AppData\Local\Temp\tmp04fu45lbwandb\b954hcs9-wandb-metadata.json
+2023-11-16 21:37:24,736 ERROR   gpu       :36812 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 21:37:26,296 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 21:37:26,762 ERROR   gpu       :36812 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 21:37:28,827 ERROR   gpu       :36812 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 21:37:29,819 INFO    Thread-16 :36812 [dir_watcher.py:_on_file_created():271] file/dir created: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\output.log
+2023-11-16 21:37:30,872 ERROR   gpu       :36812 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 21:37:31,305 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 21:37:31,861 INFO    Thread-16 :36812 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\output.log
+2023-11-16 21:37:32,907 ERROR   gpu       :36812 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 21:37:33,909 INFO    Thread-16 :36812 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\output.log
+2023-11-16 21:37:34,951 ERROR   gpu       :36812 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 21:37:35,334 DEBUG   SenderThread:36812 [sender.py:send():380] send: exit
+2023-11-16 21:37:35,334 INFO    SenderThread:36812 [sender.py:send_exit():585] handling exit code: 255
+2023-11-16 21:37:35,334 INFO    SenderThread:36812 [sender.py:send_exit():587] handling runtime: 18
+2023-11-16 21:37:35,335 INFO    SenderThread:36812 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 21:37:35,337 INFO    SenderThread:36812 [sender.py:send_exit():593] send defer
+2023-11-16 21:37:35,337 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 21:37:35,337 INFO    HandlerThread:36812 [handler.py:handle_request_defer():172] handle defer: 0
+2023-11-16 21:37:35,337 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: defer
+2023-11-16 21:37:35,337 INFO    SenderThread:36812 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-11-16 21:37:35,337 INFO    SenderThread:36812 [sender.py:transition_state():613] send defer: 1
+2023-11-16 21:37:35,337 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 21:37:35,337 INFO    HandlerThread:36812 [handler.py:handle_request_defer():172] handle defer: 1
+2023-11-16 21:37:35,337 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: defer
+2023-11-16 21:37:35,337 INFO    SenderThread:36812 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-11-16 21:37:35,337 INFO    SenderThread:36812 [sender.py:transition_state():613] send defer: 2
+2023-11-16 21:37:35,338 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 21:37:35,338 INFO    HandlerThread:36812 [handler.py:handle_request_defer():172] handle defer: 2
+2023-11-16 21:37:35,338 INFO    HandlerThread:36812 [system_monitor.py:finish():203] Stopping system monitor
+2023-11-16 21:37:35,338 DEBUG   SystemMonitor:36812 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-11-16 21:37:35,338 DEBUG   SystemMonitor:36812 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-11-16 21:37:35,351 INFO    HandlerThread:36812 [interfaces.py:finish():202] Joined cpu monitor
+2023-11-16 21:37:35,351 DEBUG   SystemMonitor:36812 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-11-16 21:37:35,351 INFO    HandlerThread:36812 [interfaces.py:finish():202] Joined disk monitor
+2023-11-16 21:37:35,429 INFO    HandlerThread:36812 [interfaces.py:finish():202] Joined gpu monitor
+2023-11-16 21:37:35,429 INFO    HandlerThread:36812 [interfaces.py:finish():202] Joined memory monitor
+2023-11-16 21:37:35,429 INFO    HandlerThread:36812 [interfaces.py:finish():202] Joined network monitor
+2023-11-16 21:37:35,429 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: defer
+2023-11-16 21:37:35,429 INFO    SenderThread:36812 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-11-16 21:37:35,429 INFO    SenderThread:36812 [sender.py:transition_state():613] send defer: 3
+2023-11-16 21:37:35,431 DEBUG   SenderThread:36812 [sender.py:send():380] send: stats
+2023-11-16 21:37:35,431 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 21:37:35,431 INFO    HandlerThread:36812 [handler.py:handle_request_defer():172] handle defer: 3
+2023-11-16 21:37:35,431 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: defer
+2023-11-16 21:37:35,431 INFO    SenderThread:36812 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-11-16 21:37:35,431 INFO    SenderThread:36812 [sender.py:transition_state():613] send defer: 4
+2023-11-16 21:37:35,431 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 21:37:35,431 INFO    HandlerThread:36812 [handler.py:handle_request_defer():172] handle defer: 4
+2023-11-16 21:37:35,431 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: defer
+2023-11-16 21:37:35,432 INFO    SenderThread:36812 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-11-16 21:37:35,432 INFO    SenderThread:36812 [sender.py:transition_state():613] send defer: 5
+2023-11-16 21:37:35,432 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 21:37:35,432 INFO    HandlerThread:36812 [handler.py:handle_request_defer():172] handle defer: 5
+2023-11-16 21:37:35,432 DEBUG   SenderThread:36812 [sender.py:send():380] send: summary
+2023-11-16 21:37:35,432 INFO    SenderThread:36812 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 21:37:35,433 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: defer
+2023-11-16 21:37:35,433 INFO    SenderThread:36812 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-11-16 21:37:35,433 INFO    SenderThread:36812 [sender.py:transition_state():613] send defer: 6
+2023-11-16 21:37:35,433 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 21:37:35,433 INFO    HandlerThread:36812 [handler.py:handle_request_defer():172] handle defer: 6
+2023-11-16 21:37:35,433 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: defer
+2023-11-16 21:37:35,433 INFO    SenderThread:36812 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-11-16 21:37:35,436 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 21:37:35,726 INFO    SenderThread:36812 [sender.py:transition_state():613] send defer: 7
+2023-11-16 21:37:35,726 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 21:37:35,726 INFO    HandlerThread:36812 [handler.py:handle_request_defer():172] handle defer: 7
+2023-11-16 21:37:35,727 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: defer
+2023-11-16 21:37:35,727 INFO    SenderThread:36812 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-11-16 21:37:35,951 INFO    Thread-16 :36812 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\output.log
+2023-11-16 21:37:35,951 INFO    Thread-16 :36812 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\config.yaml
+2023-11-16 21:37:35,951 INFO    Thread-16 :36812 [dir_watcher.py:_on_file_created():271] file/dir created: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\wandb-summary.json
+2023-11-16 21:37:36,340 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-16 21:37:37,973 INFO    Thread-16 :36812 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\output.log
+2023-11-16 21:37:39,644 INFO    SenderThread:36812 [sender.py:transition_state():613] send defer: 8
+2023-11-16 21:37:39,644 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: poll_exit
+2023-11-16 21:37:39,644 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 21:37:39,644 INFO    HandlerThread:36812 [handler.py:handle_request_defer():172] handle defer: 8
+2023-11-16 21:37:39,645 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: defer
+2023-11-16 21:37:39,645 INFO    SenderThread:36812 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-11-16 21:37:39,645 INFO    SenderThread:36812 [job_builder.py:build():298] Attempting to build job artifact
+2023-11-16 21:37:39,647 INFO    SenderThread:36812 [job_builder.py:_get_source_type():439] no source found
+2023-11-16 21:37:39,648 INFO    SenderThread:36812 [sender.py:transition_state():613] send defer: 9
+2023-11-16 21:37:39,648 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 21:37:39,648 INFO    HandlerThread:36812 [handler.py:handle_request_defer():172] handle defer: 9
+2023-11-16 21:37:39,648 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: defer
+2023-11-16 21:37:39,648 INFO    SenderThread:36812 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-11-16 21:37:39,648 INFO    SenderThread:36812 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-11-16 21:37:39,992 INFO    SenderThread:36812 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\output.log
+2023-11-16 21:37:39,993 INFO    SenderThread:36812 [dir_watcher.py:finish():388] scan: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files
+2023-11-16 21:37:39,994 INFO    SenderThread:36812 [dir_watcher.py:finish():402] scan save: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\conda-environment.yaml conda-environment.yaml
+2023-11-16 21:37:39,994 INFO    SenderThread:36812 [dir_watcher.py:finish():402] scan save: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\config.yaml config.yaml
+2023-11-16 21:37:39,995 INFO    SenderThread:36812 [dir_watcher.py:finish():402] scan save: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\output.log output.log
+2023-11-16 21:37:39,996 INFO    SenderThread:36812 [dir_watcher.py:finish():402] scan save: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\requirements.txt requirements.txt
+2023-11-16 21:37:39,999 INFO    SenderThread:36812 [dir_watcher.py:finish():402] scan save: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\wandb-metadata.json wandb-metadata.json
+2023-11-16 21:37:39,999 INFO    SenderThread:36812 [dir_watcher.py:finish():402] scan save: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\wandb-summary.json wandb-summary.json
+2023-11-16 21:37:40,003 INFO    SenderThread:36812 [sender.py:transition_state():613] send defer: 10
+2023-11-16 21:37:40,003 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 21:37:40,004 INFO    HandlerThread:36812 [handler.py:handle_request_defer():172] handle defer: 10
+2023-11-16 21:37:40,004 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: defer
+2023-11-16 21:37:40,006 INFO    SenderThread:36812 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-11-16 21:37:40,006 INFO    SenderThread:36812 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-16 21:37:40,567 INFO    wandb-upload_0:36812 [upload_job.py:push():131] Uploaded file D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\conda-environment.yaml
+2023-11-16 21:37:41,260 INFO    wandb-upload_1:36812 [upload_job.py:push():131] Uploaded file D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\config.yaml
+2023-11-16 21:37:41,274 INFO    wandb-upload_3:36812 [upload_job.py:push():131] Uploaded file D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\requirements.txt
+2023-11-16 21:37:41,375 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: keepalive
+2023-11-16 21:37:41,961 INFO    wandb-upload_2:36812 [upload_job.py:push():131] Uploaded file D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\output.log
+2023-11-16 21:37:41,971 INFO    wandb-upload_4:36812 [upload_job.py:push():131] Uploaded file D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\files\wandb-summary.json
+2023-11-16 21:37:42,180 INFO    Thread-15 (_thread_body):36812 [sender.py:transition_state():613] send defer: 11
+2023-11-16 21:37:42,181 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 21:37:42,181 INFO    HandlerThread:36812 [handler.py:handle_request_defer():172] handle defer: 11
+2023-11-16 21:37:42,181 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: defer
+2023-11-16 21:37:42,181 INFO    SenderThread:36812 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-11-16 21:37:42,181 INFO    SenderThread:36812 [file_pusher.py:join():181] waiting for file pusher
+2023-11-16 21:37:42,181 INFO    SenderThread:36812 [sender.py:transition_state():613] send defer: 12
+2023-11-16 21:37:42,181 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 21:37:42,181 INFO    HandlerThread:36812 [handler.py:handle_request_defer():172] handle defer: 12
+2023-11-16 21:37:42,181 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: defer
+2023-11-16 21:37:42,182 INFO    SenderThread:36812 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-11-16 21:37:42,182 INFO    SenderThread:36812 [file_stream.py:finish():595] file stream finish called
+2023-11-16 21:37:42,460 INFO    SenderThread:36812 [file_stream.py:finish():599] file stream finish is done
+2023-11-16 21:37:42,460 INFO    SenderThread:36812 [sender.py:transition_state():613] send defer: 13
+2023-11-16 21:37:42,460 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 21:37:42,460 INFO    HandlerThread:36812 [handler.py:handle_request_defer():172] handle defer: 13
+2023-11-16 21:37:42,460 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: defer
+2023-11-16 21:37:42,460 INFO    SenderThread:36812 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-11-16 21:37:42,460 INFO    SenderThread:36812 [sender.py:transition_state():613] send defer: 14
+2023-11-16 21:37:42,461 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 21:37:42,461 DEBUG   SenderThread:36812 [sender.py:send():380] send: final
+2023-11-16 21:37:42,461 INFO    HandlerThread:36812 [handler.py:handle_request_defer():172] handle defer: 14
+2023-11-16 21:37:42,461 DEBUG   SenderThread:36812 [sender.py:send():380] send: footer
+2023-11-16 21:37:42,461 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: defer
+2023-11-16 21:37:42,461 INFO    SenderThread:36812 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-11-16 21:37:42,462 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-16 21:37:42,462 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: server_info
+2023-11-16 21:37:42,462 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: get_summary
+2023-11-16 21:37:42,462 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: poll_exit
+2023-11-16 21:37:42,462 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: sampled_history
+2023-11-16 21:37:42,462 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: server_info
+2023-11-16 21:37:42,463 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 21:37:42,464 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: job_info
+2023-11-16 21:37:42,701 DEBUG   SenderThread:36812 [sender.py:send_request():407] send_request: job_info
+2023-11-16 21:37:42,701 INFO    MainThread:36812 [wandb_run.py:_footer_history_summary_info():3760] rendering history
+2023-11-16 21:37:42,701 INFO    MainThread:36812 [wandb_run.py:_footer_history_summary_info():3792] rendering summary
+2023-11-16 21:37:42,701 INFO    MainThread:36812 [wandb_run.py:_footer_sync_info():3719] logging synced files
+2023-11-16 21:37:42,713 DEBUG   HandlerThread:36812 [handler.py:handle_request():146] handle_request: shutdown
+2023-11-16 21:37:42,713 INFO    HandlerThread:36812 [handler.py:finish():866] shutting down handler
+2023-11-16 21:37:43,476 INFO    WriterThread:36812 [datastore.py:close():294] close: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_213714-uhpdaglr\run-uhpdaglr.wandb
+2023-11-16 21:37:43,711 INFO    SenderThread:36812 [sender.py:finish():1536] shutting down sender
+2023-11-16 21:37:43,711 INFO    SenderThread:36812 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-16 21:37:43,711 INFO    SenderThread:36812 [file_pusher.py:join():181] waiting for file pusher

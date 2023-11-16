@@ -1,0 +1,964 @@
+2023-11-16 22:08:29,850 INFO    StreamThr :6128 [internal.py:wandb_internal():86] W&B internal server running at pid: 6128, started at: 2023-11-16 22:08:29.850853
+2023-11-16 22:08:29,850 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status
+2023-11-16 22:08:29,855 INFO    WriterThread:6128 [datastore.py:open_for_write():85] open: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\run-vqs2uadn.wandb
+2023-11-16 22:08:29,855 DEBUG   SenderThread:6128 [sender.py:send():380] send: header
+2023-11-16 22:08:29,855 DEBUG   SenderThread:6128 [sender.py:send():380] send: run
+2023-11-16 22:08:30,900 INFO    SenderThread:6128 [dir_watcher.py:__init__():211] watching files in: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files
+2023-11-16 22:08:30,904 INFO    SenderThread:6128 [sender.py:_start_run_threads():1124] run started: vqs2uadn with start time 1700147309.850853
+2023-11-16 22:08:31,029 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: check_version
+2023-11-16 22:08:31,029 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: check_version
+2023-11-16 22:08:31,758 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: run_start
+2023-11-16 22:08:31,797 DEBUG   HandlerThread:6128 [system_info.py:__init__():32] System info init
+2023-11-16 22:08:31,797 DEBUG   HandlerThread:6128 [system_info.py:__init__():47] System info init done
+2023-11-16 22:08:31,797 INFO    HandlerThread:6128 [system_monitor.py:start():194] Starting system monitor
+2023-11-16 22:08:31,798 INFO    SystemMonitor:6128 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2023-11-16 22:08:31,798 INFO    HandlerThread:6128 [system_monitor.py:probe():214] Collecting system info
+2023-11-16 22:08:31,816 INFO    SystemMonitor:6128 [interfaces.py:start():190] Started cpu monitoring
+2023-11-16 22:08:31,816 INFO    SystemMonitor:6128 [interfaces.py:start():190] Started disk monitoring
+2023-11-16 22:08:31,816 INFO    SystemMonitor:6128 [interfaces.py:start():190] Started gpu monitoring
+2023-11-16 22:08:31,832 INFO    SystemMonitor:6128 [interfaces.py:start():190] Started memory monitoring
+2023-11-16 22:08:31,856 INFO    SystemMonitor:6128 [interfaces.py:start():190] Started network monitoring
+2023-11-16 22:08:31,856 DEBUG   HandlerThread:6128 [system_info.py:probe():196] Probing system
+2023-11-16 22:08:31,867 DEBUG   HandlerThread:6128 [gitlib.py:_init_repo():56] git repository is invalid
+2023-11-16 22:08:31,867 DEBUG   HandlerThread:6128 [system_info.py:probe():244] Probing system done
+2023-11-16 22:08:31,867 DEBUG   HandlerThread:6128 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.11.3', 'heartbeatAt': '2023-11-16T15:08:31.856711', 'startedAt': '2023-11-16T15:08:29.843488', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'd:\\AI\\Skills\\Paper\\handsign_classification\\main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'host': 'LAPTOP-RFE8LCHG', 'username': 'asus', 'executable': 'C:\\Users\\asus\\miniconda3\\envs\\projectAI\\python.exe', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3201.0, 'min': 0.0, 'max': 3201.0}, 'cpu_freq_per_core': [{'current': 3201.0, 'min': 0.0, 'max': 3201.0}], 'disk': {'/': {'total': 325.29003524780273, 'used': 198.55255126953125}}, 'gpu': 'NVIDIA GeForce RTX 3050 Laptop GPU', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3050 Laptop GPU', 'memory_total': 4294967296}], 'memory': {'total': 15.405651092529297}}
+2023-11-16 22:08:31,867 INFO    HandlerThread:6128 [system_monitor.py:probe():224] Finished collecting system info
+2023-11-16 22:08:31,867 INFO    HandlerThread:6128 [system_monitor.py:probe():227] Publishing system info
+2023-11-16 22:08:31,867 DEBUG   HandlerThread:6128 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2023-11-16 22:08:31,868 DEBUG   HandlerThread:6128 [system_info.py:_save_pip():68] Saving pip packages done
+2023-11-16 22:08:31,868 DEBUG   HandlerThread:6128 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2023-11-16 22:08:31,874 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:08:31,904 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_created():271] file/dir created: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\conda-environment.yaml
+2023-11-16 22:08:31,904 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_created():271] file/dir created: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\requirements.txt
+2023-11-16 22:08:33,900 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:08:34,879 DEBUG   HandlerThread:6128 [system_info.py:_save_conda():87] Saving conda packages done
+2023-11-16 22:08:34,880 INFO    HandlerThread:6128 [system_monitor.py:probe():229] Finished publishing system info
+2023-11-16 22:08:34,899 DEBUG   SenderThread:6128 [sender.py:send():380] send: files
+2023-11-16 22:08:34,899 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-metadata.json with policy now
+2023-11-16 22:08:34,900 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:08:34,910 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:08:34,911 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:08:34,913 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:08:34,931 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\conda-environment.yaml
+2023-11-16 22:08:34,932 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_created():271] file/dir created: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-metadata.json
+2023-11-16 22:08:35,163 DEBUG   SenderThread:6128 [sender.py:send():380] send: telemetry
+2023-11-16 22:08:35,963 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_created():271] file/dir created: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:08:35,975 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:08:37,079 INFO    wandb-upload_0:6128 [upload_job.py:push():131] Uploaded file C:\Users\asus\AppData\Local\Temp\tmpaq5ye0pfwandb\mpzak800-wandb-metadata.json
+2023-11-16 22:08:38,005 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:08:38,021 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:08:40,053 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:08:40,199 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:08:42,068 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:08:44,100 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:08:45,227 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:08:46,128 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:08:48,153 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:08:49,899 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:08:49,909 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:08:49,910 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:08:50,175 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:08:51,175 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:08:52,204 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:08:54,228 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:08:56,215 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:08:56,271 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:08:58,306 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:08:59,847 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:08:59,848 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:08:59,848 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:08:59,852 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:09:00,327 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_created():271] file/dir created: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:09:00,336 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:01,337 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:09:01,875 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:09:02,401 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\config.yaml
+2023-11-16 22:09:02,416 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:09:02,452 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:04,468 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:04,903 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:09:04,903 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:09:04,903 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:09:06,490 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:08,200 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:09:08,507 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:10,524 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:12,540 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:13,246 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:09:14,563 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:16,592 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:18,279 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:09:18,626 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:19,908 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:09:19,909 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:09:19,909 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:09:20,405 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:09:20,407 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:09:20,407 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:09:20,408 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:09:20,639 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:09:20,648 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:21,650 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:09:22,667 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:09:22,677 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:23,437 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:09:24,698 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:26,729 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:28,460 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:09:28,744 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:30,773 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:31,860 DEBUG   SystemMonitor:6128 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2023-11-16 22:09:31,861 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:09:32,869 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:33,868 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:09:34,895 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:34,908 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:09:34,908 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:09:34,918 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:09:36,919 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:38,948 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:39,276 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:09:40,975 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:41,225 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:09:41,226 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:09:41,226 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:09:41,227 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:09:41,918 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:09:41,918 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:09:42,995 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:43,949 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:09:45,023 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:45,271 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:09:47,049 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:49,062 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:49,916 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:09:49,916 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:09:49,932 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:09:51,080 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:51,191 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:09:53,102 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:55,123 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:56,236 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:09:57,159 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:09:59,186 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:01,217 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:01,292 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:10:01,869 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:10:01,938 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:10:01,940 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:10:01,940 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:10:01,941 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:10:02,212 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:10:03,266 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:10:03,333 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:04,280 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:10:04,933 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:10:04,933 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:10:04,933 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:10:05,352 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:07,205 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:10:07,381 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:09,395 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:11,412 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:12,244 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:10:13,431 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:15,451 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:17,271 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:10:17,467 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:19,477 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:19,944 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:10:19,944 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:10:19,944 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:10:21,502 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:22,307 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:10:22,484 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:10:22,485 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:10:22,486 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:10:22,488 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:10:23,496 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:10:23,496 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:10:23,518 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:24,502 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:10:25,535 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:27,550 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:10:27,562 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:29,589 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:31,621 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:31,877 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:10:32,883 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:10:33,725 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:34,940 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:10:34,940 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:10:34,940 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:10:35,742 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:37,759 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:38,367 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:10:39,779 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:41,793 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:42,994 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:10:42,994 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:10:42,994 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:10:42,995 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:10:43,754 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:10:43,808 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:44,002 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:10:44,764 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:10:45,779 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:10:45,822 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:47,843 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:49,028 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:10:49,858 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:49,946 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:10:49,946 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:10:49,947 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:10:51,877 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:53,899 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:54,299 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:10:55,928 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:57,956 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:10:59,348 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:10:59,980 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:01,885 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:11:02,050 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:03,278 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:11:03,279 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:11:03,279 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:11:03,280 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:11:04,086 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:11:04,100 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:11:04,160 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:04,959 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:11:04,959 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:11:04,960 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:11:05,309 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:11:06,095 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:11:06,180 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:08,205 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:10,222 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:10,340 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:11:12,240 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:14,264 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:15,390 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:11:16,292 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:18,310 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:19,955 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:11:19,955 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:11:19,968 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:11:20,326 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:21,226 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:11:22,348 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:23,479 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:11:23,480 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:11:23,480 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:11:23,482 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:11:24,333 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:11:24,333 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:11:24,373 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:25,339 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:11:26,398 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:26,511 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:11:28,434 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:30,454 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:31,546 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:11:31,898 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:11:32,481 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:34,571 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:34,956 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:11:34,956 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:11:34,972 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:11:36,597 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:37,293 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:11:38,625 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:40,661 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:42,332 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:11:42,684 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:43,994 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:11:43,995 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:11:43,995 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:11:43,997 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:11:44,612 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:11:44,710 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:45,624 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:11:46,638 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:11:46,726 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:48,024 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:11:48,752 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:49,984 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:11:49,984 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:11:49,986 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:11:50,762 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:52,787 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:53,351 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:11:54,817 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:56,832 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:11:58,408 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:11:58,857 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:00,875 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:01,909 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:12:02,888 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:03,935 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:12:04,506 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:12:04,507 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:12:04,507 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:12:04,508 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:12:04,888 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:12:04,984 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:12:04,984 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:12:04,991 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:12:04,997 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:05,894 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:12:06,912 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:12:07,015 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:09,027 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:09,267 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:12:11,043 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:13,065 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:14,306 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:12:15,084 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:17,110 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:19,129 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:19,343 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:12:19,981 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:12:20,002 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:12:20,005 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:12:21,148 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:23,168 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:25,189 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:25,291 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:12:25,477 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:12:25,477 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:12:25,477 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:12:25,477 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:12:26,187 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:12:26,187 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:12:27,222 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:28,216 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:12:29,256 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:30,499 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:12:31,277 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:31,915 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:12:33,310 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:34,992 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:12:35,012 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:12:35,012 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:12:35,434 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:36,290 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:12:37,449 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:39,467 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:41,315 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:12:41,487 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:43,512 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:45,529 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:45,989 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:12:45,989 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:12:45,989 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:12:45,989 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:12:46,454 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:12:46,992 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:12:47,481 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:12:47,542 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:48,490 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:12:49,571 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:49,995 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:12:50,015 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:12:50,015 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:12:51,591 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:52,282 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:12:53,612 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:55,628 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:57,309 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:12:57,646 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:12:59,668 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:01,708 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:01,916 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:13:02,924 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:13:03,721 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:05,003 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:13:05,023 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:13:05,023 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:13:05,813 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:06,894 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:13:06,895 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:13:06,895 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:13:06,895 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:13:07,758 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:13:07,758 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:13:07,829 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:08,761 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:13:08,922 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:13:09,845 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:11,872 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:13,897 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:13,943 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:13:15,913 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:17,941 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:18,994 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:13:19,962 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:20,011 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:13:20,042 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:13:20,042 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:13:21,990 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:24,021 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:24,393 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:13:26,050 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:27,643 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:13:27,644 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:13:27,644 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:13:27,645 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:13:28,049 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:13:28,049 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:13:28,069 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:29,659 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:13:30,078 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:13:30,098 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:31,926 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:13:32,127 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:34,156 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:34,957 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:13:35,016 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:13:35,063 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:13:35,063 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:13:36,330 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:38,353 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:40,366 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:40,431 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:13:42,395 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:44,422 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:45,481 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:13:46,442 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:48,220 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:13:48,220 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:13:48,220 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:13:48,221 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:13:48,354 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:13:48,466 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:49,359 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:13:50,017 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:13:50,062 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:13:50,062 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:13:50,388 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:13:50,492 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:51,428 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:13:52,521 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:54,543 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:56,495 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:13:56,572 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:13:58,596 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:00,609 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:01,542 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:14:01,934 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:14:02,636 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:04,668 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:05,019 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:14:05,062 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:14:05,064 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:14:06,788 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:07,367 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:14:08,806 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:09,704 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:14:09,706 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:14:09,707 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:14:09,707 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:14:09,749 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:14:10,753 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:14:10,826 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:11,756 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:14:12,729 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:14:12,841 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:14,865 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:16,890 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:17,766 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:14:18,909 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:20,026 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:14:20,074 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:14:20,074 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:14:20,931 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:22,951 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:23,432 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:14:24,971 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:27,000 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:28,449 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:14:29,023 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:30,674 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:14:30,675 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:14:30,675 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:14:30,676 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:14:31,040 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:14:31,055 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:31,938 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:14:32,053 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:14:33,080 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:33,951 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:14:35,027 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:14:35,097 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:14:35,098 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:14:35,114 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:37,251 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:39,264 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:39,410 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:14:41,288 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:43,318 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:44,437 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:14:45,356 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:47,391 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:49,422 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:49,482 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:14:50,039 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:14:50,101 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:14:50,102 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:14:51,449 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:51,824 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:14:51,825 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:14:51,825 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:14:51,826 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:14:52,317 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:14:53,468 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:54,345 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:14:54,844 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:14:55,495 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:57,527 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:59,556 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:14:59,897 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:15:01,573 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:01,940 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:15:03,602 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:04,954 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:15:05,045 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:15:05,115 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:15:05,115 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:15:05,622 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:07,786 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:09,802 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:10,444 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:15:11,815 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:11,985 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:15:11,985 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:15:11,985 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:15:11,987 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:15:12,562 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:15:13,604 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:15:13,834 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:14,611 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:15:15,844 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:16,031 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:15:17,863 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:19,887 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:20,048 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:15:20,125 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:15:20,125 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:15:21,435 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:15:21,908 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:23,923 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:25,948 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:26,485 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:15:27,974 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:29,988 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:31,536 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:15:31,944 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:15:32,016 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:33,366 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:15:33,367 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:15:33,367 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:15:33,368 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:15:33,938 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:15:34,037 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:34,945 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:15:35,054 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:15:35,133 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:15:35,133 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:15:35,956 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:15:36,059 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:37,499 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:15:38,171 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:40,191 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:42,216 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:42,546 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:15:44,238 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:46,260 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:47,598 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:15:48,282 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:50,060 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:15:50,175 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:15:50,175 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:15:50,307 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:52,328 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:53,528 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:15:53,948 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:15:53,949 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:15:53,949 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:15:53,950 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:15:54,251 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:15:54,349 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:56,282 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:15:56,368 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:58,393 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:15:58,999 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:16:00,413 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:01,946 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:16:02,434 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:04,456 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:04,980 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:16:05,073 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:16:05,163 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:16:05,164 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:16:06,472 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:08,577 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:10,561 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:16:10,607 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:12,627 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:14,653 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:15,323 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:16:15,324 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:16:15,324 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:16:15,325 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:16:15,566 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:16:16,327 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:16:16,645 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:16:16,671 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:17,658 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:16:18,709 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:20,087 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:16:20,160 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:16:20,160 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:16:20,721 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:21,499 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:16:22,736 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:24,766 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:26,522 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:16:26,785 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:28,803 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:30,847 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:31,564 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:16:31,954 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:16:32,869 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:34,904 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:35,090 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:16:35,152 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:16:35,153 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:16:36,735 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:16:36,735 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:16:36,735 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:16:36,736 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:16:36,736 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:16:36,919 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:16:36,930 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:37,919 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:16:38,985 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:16:39,032 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:41,055 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:41,794 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:16:43,078 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:45,104 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:46,841 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:16:47,121 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:49,145 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:50,098 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:16:50,160 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:16:50,161 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:16:51,167 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:52,490 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:16:53,189 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:55,215 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:57,237 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:16:57,303 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:16:57,304 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:16:57,304 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:16:57,305 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:16:58,238 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:16:58,239 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:16:58,316 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:16:59,268 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:01,283 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:01,957 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:17:03,307 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:03,978 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:17:05,099 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:17:05,164 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:17:05,165 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:17:05,340 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:07,364 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:09,479 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:17:09,491 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:11,515 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:13,527 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:14,511 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:17:15,541 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:17,505 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:17:17,507 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:17:17,508 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:17:17,509 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:17:17,556 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:18,513 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:17:18,514 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:17:19,530 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:17:19,531 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:17:19,568 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:20,104 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:17:20,166 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:17:20,166 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:17:21,591 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:23,634 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:25,483 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:17:25,655 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:27,680 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:29,707 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:30,511 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:17:31,732 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:31,961 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:17:33,765 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:35,116 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:17:35,181 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:17:35,181 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:17:35,794 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:36,493 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:17:37,648 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:17:37,649 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:17:37,649 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:17:37,650 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:17:37,807 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:17:37,819 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:39,873 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:17:39,939 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:40,874 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:17:41,692 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:17:41,955 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:43,982 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:46,007 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:46,737 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:17:48,023 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:50,063 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:50,131 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:17:50,186 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:17:50,187 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:17:52,080 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:52,475 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:17:54,097 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:56,112 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:57,501 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:17:58,140 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:17:58,221 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:17:58,222 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:17:58,222 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:17:58,223 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:17:59,081 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:18:00,093 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:18:00,167 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:01,972 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:18:02,191 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:02,976 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:18:04,207 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:05,135 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:18:05,198 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:18:05,198 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:18:06,229 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:08,258 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:08,498 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:18:10,376 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:12,400 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:13,535 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:18:14,416 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:16,438 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:18,459 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:18,586 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:18:19,677 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:18:19,679 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:18:19,680 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:18:19,681 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:18:20,141 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:18:20,218 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:18:20,218 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:18:20,485 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:18:20,514 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:21,497 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:18:22,511 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:18:22,543 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:24,542 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:18:24,569 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:26,605 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:28,617 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:29,592 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:18:30,631 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:31,981 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:18:32,657 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:34,689 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:35,003 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:18:35,142 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:18:35,219 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:18:35,219 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:18:36,719 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:38,747 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:40,600 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:18:40,850 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:41,683 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:18:41,684 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:18:41,684 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:18:41,685 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:18:41,800 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:18:42,873 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:43,817 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:18:44,820 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:18:44,893 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:45,714 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:18:46,917 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:48,928 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:50,158 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:18:50,230 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: stop_status
+2023-11-16 22:18:50,230 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: stop_status
+2023-11-16 22:18:50,955 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:51,501 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:18:52,968 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:54,990 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:56,534 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:18:56,998 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:18:59,018 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:19:01,044 ERROR   gpu       :6128 [interfaces.py:monitor():144] Failed to sample metric: Not Supported
+2023-11-16 22:19:01,571 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:19:01,985 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:19:02,184 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: partial_history
+2023-11-16 22:19:02,185 DEBUG   SenderThread:6128 [sender.py:send():380] send: history
+2023-11-16 22:19:02,185 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: summary_record
+2023-11-16 22:19:02,186 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:19:02,186 DEBUG   SenderThread:6128 [sender.py:send():380] send: telemetry
+2023-11-16 22:19:02,186 DEBUG   SenderThread:6128 [sender.py:send():380] send: exit
+2023-11-16 22:19:02,186 INFO    SenderThread:6128 [sender.py:send_exit():585] handling exit code: 0
+2023-11-16 22:19:02,186 INFO    SenderThread:6128 [sender.py:send_exit():587] handling runtime: 630
+2023-11-16 22:19:02,186 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:19:02,188 INFO    SenderThread:6128 [sender.py:send_exit():593] send defer
+2023-11-16 22:19:02,188 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 22:19:02,188 INFO    HandlerThread:6128 [handler.py:handle_request_defer():172] handle defer: 0
+2023-11-16 22:19:02,188 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: defer
+2023-11-16 22:19:02,188 INFO    SenderThread:6128 [sender.py:send_request_defer():609] handle sender defer: 0
+2023-11-16 22:19:02,188 INFO    SenderThread:6128 [sender.py:transition_state():613] send defer: 1
+2023-11-16 22:19:02,188 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 22:19:02,188 INFO    HandlerThread:6128 [handler.py:handle_request_defer():172] handle defer: 1
+2023-11-16 22:19:02,189 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: defer
+2023-11-16 22:19:02,189 INFO    SenderThread:6128 [sender.py:send_request_defer():609] handle sender defer: 1
+2023-11-16 22:19:02,189 INFO    SenderThread:6128 [sender.py:transition_state():613] send defer: 2
+2023-11-16 22:19:02,189 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 22:19:02,189 INFO    HandlerThread:6128 [handler.py:handle_request_defer():172] handle defer: 2
+2023-11-16 22:19:02,189 INFO    HandlerThread:6128 [system_monitor.py:finish():203] Stopping system monitor
+2023-11-16 22:19:02,189 DEBUG   SystemMonitor:6128 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2023-11-16 22:19:02,189 DEBUG   SystemMonitor:6128 [system_monitor.py:_start():183] Publishing last batch of metrics
+2023-11-16 22:19:02,202 INFO    HandlerThread:6128 [interfaces.py:finish():202] Joined cpu monitor
+2023-11-16 22:19:02,203 INFO    HandlerThread:6128 [interfaces.py:finish():202] Joined disk monitor
+2023-11-16 22:19:02,270 INFO    HandlerThread:6128 [interfaces.py:finish():202] Joined gpu monitor
+2023-11-16 22:19:02,271 INFO    HandlerThread:6128 [interfaces.py:finish():202] Joined memory monitor
+2023-11-16 22:19:02,271 INFO    HandlerThread:6128 [interfaces.py:finish():202] Joined network monitor
+2023-11-16 22:19:02,271 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: defer
+2023-11-16 22:19:02,271 INFO    SenderThread:6128 [sender.py:send_request_defer():609] handle sender defer: 2
+2023-11-16 22:19:02,271 INFO    SenderThread:6128 [sender.py:transition_state():613] send defer: 3
+2023-11-16 22:19:02,271 DEBUG   SenderThread:6128 [sender.py:send():380] send: stats
+2023-11-16 22:19:02,271 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 22:19:02,271 INFO    HandlerThread:6128 [handler.py:handle_request_defer():172] handle defer: 3
+2023-11-16 22:19:02,273 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: defer
+2023-11-16 22:19:02,273 INFO    SenderThread:6128 [sender.py:send_request_defer():609] handle sender defer: 3
+2023-11-16 22:19:02,273 INFO    SenderThread:6128 [sender.py:transition_state():613] send defer: 4
+2023-11-16 22:19:02,273 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 22:19:02,273 INFO    HandlerThread:6128 [handler.py:handle_request_defer():172] handle defer: 4
+2023-11-16 22:19:02,273 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: defer
+2023-11-16 22:19:02,273 INFO    SenderThread:6128 [sender.py:send_request_defer():609] handle sender defer: 4
+2023-11-16 22:19:02,273 INFO    SenderThread:6128 [sender.py:transition_state():613] send defer: 5
+2023-11-16 22:19:02,273 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 22:19:02,273 INFO    HandlerThread:6128 [handler.py:handle_request_defer():172] handle defer: 5
+2023-11-16 22:19:02,274 DEBUG   SenderThread:6128 [sender.py:send():380] send: summary
+2023-11-16 22:19:02,274 INFO    SenderThread:6128 [sender.py:_save_file():1380] saving file wandb-summary.json with policy end
+2023-11-16 22:19:02,275 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: defer
+2023-11-16 22:19:02,275 INFO    SenderThread:6128 [sender.py:send_request_defer():609] handle sender defer: 5
+2023-11-16 22:19:02,275 INFO    SenderThread:6128 [sender.py:transition_state():613] send defer: 6
+2023-11-16 22:19:02,275 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 22:19:02,275 INFO    HandlerThread:6128 [handler.py:handle_request_defer():172] handle defer: 6
+2023-11-16 22:19:02,275 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: defer
+2023-11-16 22:19:02,275 INFO    SenderThread:6128 [sender.py:send_request_defer():609] handle sender defer: 6
+2023-11-16 22:19:02,278 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: status_report
+2023-11-16 22:19:02,569 INFO    SenderThread:6128 [sender.py:transition_state():613] send defer: 7
+2023-11-16 22:19:02,569 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 22:19:02,569 INFO    HandlerThread:6128 [handler.py:handle_request_defer():172] handle defer: 7
+2023-11-16 22:19:02,570 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: defer
+2023-11-16 22:19:02,570 INFO    SenderThread:6128 [sender.py:send_request_defer():609] handle sender defer: 7
+2023-11-16 22:19:03,048 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:19:03,048 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\config.yaml
+2023-11-16 22:19:03,194 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-16 22:19:04,054 INFO    Thread-16 :6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:19:04,070 INFO    SenderThread:6128 [sender.py:transition_state():613] send defer: 8
+2023-11-16 22:19:04,070 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: poll_exit
+2023-11-16 22:19:04,070 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 22:19:04,070 INFO    HandlerThread:6128 [handler.py:handle_request_defer():172] handle defer: 8
+2023-11-16 22:19:04,070 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: defer
+2023-11-16 22:19:04,070 INFO    SenderThread:6128 [sender.py:send_request_defer():609] handle sender defer: 8
+2023-11-16 22:19:04,070 INFO    SenderThread:6128 [job_builder.py:build():298] Attempting to build job artifact
+2023-11-16 22:19:04,072 INFO    SenderThread:6128 [job_builder.py:_get_source_type():439] no source found
+2023-11-16 22:19:04,072 INFO    SenderThread:6128 [sender.py:transition_state():613] send defer: 9
+2023-11-16 22:19:04,072 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 22:19:04,072 INFO    HandlerThread:6128 [handler.py:handle_request_defer():172] handle defer: 9
+2023-11-16 22:19:04,072 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: defer
+2023-11-16 22:19:04,072 INFO    SenderThread:6128 [sender.py:send_request_defer():609] handle sender defer: 9
+2023-11-16 22:19:04,072 INFO    SenderThread:6128 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-11-16 22:19:04,195 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-16 22:19:05,068 INFO    SenderThread:6128 [dir_watcher.py:_on_file_modified():288] file/dir modified: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:19:05,068 INFO    SenderThread:6128 [dir_watcher.py:finish():388] scan: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files
+2023-11-16 22:19:05,068 INFO    SenderThread:6128 [dir_watcher.py:finish():402] scan save: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\conda-environment.yaml conda-environment.yaml
+2023-11-16 22:19:05,068 INFO    SenderThread:6128 [dir_watcher.py:finish():402] scan save: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\config.yaml config.yaml
+2023-11-16 22:19:05,070 INFO    SenderThread:6128 [dir_watcher.py:finish():402] scan save: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log output.log
+2023-11-16 22:19:05,073 INFO    SenderThread:6128 [dir_watcher.py:finish():402] scan save: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\requirements.txt requirements.txt
+2023-11-16 22:19:05,074 INFO    SenderThread:6128 [dir_watcher.py:finish():402] scan save: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-metadata.json wandb-metadata.json
+2023-11-16 22:19:05,075 INFO    SenderThread:6128 [dir_watcher.py:finish():402] scan save: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json wandb-summary.json
+2023-11-16 22:19:05,077 INFO    SenderThread:6128 [sender.py:transition_state():613] send defer: 10
+2023-11-16 22:19:05,077 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: poll_exit
+2023-11-16 22:19:05,077 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 22:19:05,078 INFO    HandlerThread:6128 [handler.py:handle_request_defer():172] handle defer: 10
+2023-11-16 22:19:05,079 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: defer
+2023-11-16 22:19:05,079 INFO    SenderThread:6128 [sender.py:send_request_defer():609] handle sender defer: 10
+2023-11-16 22:19:05,079 INFO    SenderThread:6128 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-16 22:19:05,197 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-16 22:19:05,198 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: poll_exit
+2023-11-16 22:19:06,200 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-16 22:19:06,200 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: poll_exit
+2023-11-16 22:19:07,023 INFO    wandb-upload_0:6128 [upload_job.py:push():131] Uploaded file D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\conda-environment.yaml
+2023-11-16 22:19:07,207 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-16 22:19:07,207 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: poll_exit
+2023-11-16 22:19:07,406 INFO    wandb-upload_4:6128 [upload_job.py:push():131] Uploaded file D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\wandb-summary.json
+2023-11-16 22:19:07,889 INFO    wandb-upload_1:6128 [upload_job.py:push():131] Uploaded file D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\config.yaml
+2023-11-16 22:19:07,890 INFO    wandb-upload_2:6128 [upload_job.py:push():131] Uploaded file D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\output.log
+2023-11-16 22:19:07,917 INFO    wandb-upload_3:6128 [upload_job.py:push():131] Uploaded file D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\files\requirements.txt
+2023-11-16 22:19:08,127 INFO    Thread-15 (_thread_body):6128 [sender.py:transition_state():613] send defer: 11
+2023-11-16 22:19:08,127 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 22:19:08,128 INFO    HandlerThread:6128 [handler.py:handle_request_defer():172] handle defer: 11
+2023-11-16 22:19:08,128 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: defer
+2023-11-16 22:19:08,128 INFO    SenderThread:6128 [sender.py:send_request_defer():609] handle sender defer: 11
+2023-11-16 22:19:08,128 INFO    SenderThread:6128 [file_pusher.py:join():181] waiting for file pusher
+2023-11-16 22:19:08,128 INFO    SenderThread:6128 [sender.py:transition_state():613] send defer: 12
+2023-11-16 22:19:08,129 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 22:19:08,129 INFO    HandlerThread:6128 [handler.py:handle_request_defer():172] handle defer: 12
+2023-11-16 22:19:08,129 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: defer
+2023-11-16 22:19:08,129 INFO    SenderThread:6128 [sender.py:send_request_defer():609] handle sender defer: 12
+2023-11-16 22:19:08,129 INFO    SenderThread:6128 [file_stream.py:finish():595] file stream finish called
+2023-11-16 22:19:08,208 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-16 22:19:09,213 INFO    SenderThread:6128 [file_stream.py:finish():599] file stream finish is done
+2023-11-16 22:19:09,213 INFO    SenderThread:6128 [sender.py:transition_state():613] send defer: 13
+2023-11-16 22:19:09,217 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: poll_exit
+2023-11-16 22:19:09,217 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 22:19:09,217 INFO    HandlerThread:6128 [handler.py:handle_request_defer():172] handle defer: 13
+2023-11-16 22:19:09,217 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: defer
+2023-11-16 22:19:09,217 INFO    SenderThread:6128 [sender.py:send_request_defer():609] handle sender defer: 13
+2023-11-16 22:19:09,217 INFO    SenderThread:6128 [sender.py:transition_state():613] send defer: 14
+2023-11-16 22:19:09,217 DEBUG   SenderThread:6128 [sender.py:send():380] send: final
+2023-11-16 22:19:09,217 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: defer
+2023-11-16 22:19:09,217 DEBUG   SenderThread:6128 [sender.py:send():380] send: footer
+2023-11-16 22:19:09,217 INFO    HandlerThread:6128 [handler.py:handle_request_defer():172] handle defer: 14
+2023-11-16 22:19:09,217 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: defer
+2023-11-16 22:19:09,217 INFO    SenderThread:6128 [sender.py:send_request_defer():609] handle sender defer: 14
+2023-11-16 22:19:09,217 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: poll_exit
+2023-11-16 22:19:09,217 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: poll_exit
+2023-11-16 22:19:09,217 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: internal_messages
+2023-11-16 22:19:09,217 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: server_info
+2023-11-16 22:19:09,217 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: get_summary
+2023-11-16 22:19:09,217 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: sampled_history
+2023-11-16 22:19:09,217 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: server_info
+2023-11-16 22:19:09,217 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: job_info
+2023-11-16 22:19:09,462 DEBUG   SenderThread:6128 [sender.py:send_request():407] send_request: job_info
+2023-11-16 22:19:09,462 DEBUG   HandlerThread:6128 [handler.py:handle_request():146] handle_request: shutdown
+2023-11-16 22:19:09,462 INFO    HandlerThread:6128 [handler.py:finish():866] shutting down handler
+2023-11-16 22:19:10,230 INFO    WriterThread:6128 [datastore.py:close():294] close: D:\AI\Skills\Paper\handsign_classification\wandb\run-20231116_220829-vqs2uadn\run-vqs2uadn.wandb
+2023-11-16 22:19:10,477 INFO    SenderThread:6128 [sender.py:finish():1536] shutting down sender
+2023-11-16 22:19:10,477 INFO    SenderThread:6128 [file_pusher.py:finish():175] shutting down file pusher
+2023-11-16 22:19:10,477 INFO    SenderThread:6128 [file_pusher.py:join():181] waiting for file pusher

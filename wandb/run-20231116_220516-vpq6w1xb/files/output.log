@@ -1,0 +1,46 @@
+
+  0%|                                                                                                                                                 | 0/30 [00:00<?, ?it/s]
+
+  3%|████▌                                                                                                                                    | 1/30 [00:24<11:37, 24.07s/it]
+
+  7%|█████████▏                                                                                                                               | 2/30 [00:44<10:19, 22.14s/it]
+
+ 10%|█████████████▋                                                                                                                           | 3/30 [01:05<09:43, 21.60s/it]
+
+
+ 17%|██████████████████████▊                                                                                                                  | 5/30 [01:43<08:18, 19.95s/it]
+Epoch: 5 | train_loss: 5.5722 | train_acc: 0.0031 | test_loss: 5.5719 | test_acc: 0.0029
+
+ 20%|███████████████████████████▍                                                                                                             | 6/30 [02:02<07:50, 19.59s/it]
+
+ 23%|███████████████████████████████▉                                                                                                         | 7/30 [02:41<08:49, 23.04s/it]
+Traceback (most recent call last):
+  File "d:\AI\Skills\Paper\handsign_classification\main.py", line 38, in <module>
+    results = train.train(epochs=30, train_dataloader = train_dataloader, test_dataloader = val_dataloader)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\AI\Skills\Paper\handsign_classification\trainer\trainer.py", line 106, in train
+    val_loss, val_acc = self.test_epoch(dataloader=test_dataloader, device=self.device)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\AI\Skills\Paper\handsign_classification\trainer\trainer.py", line 88, in test_epoch
+    test_acc += Accuracy(test_pred_labels, y).item()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torchmetrics\metric.py", line 298, in forward
+    self._forward_cache = self._forward_reduce_state_update(*args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torchmetrics\metric.py", line 367, in _forward_reduce_state_update
+    self.update(*args, **kwargs)
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torchmetrics\metric.py", line 457, in wrapped_func
+    update(*args, **kwargs)
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torchmetrics\classification\stat_scores.py", line 326, in update
+    tp, fp, tn, fn = _multiclass_stat_scores_update(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torchmetrics\functional\classification\stat_scores.py", line 413, in _multiclass_stat_scores_update
+    bins = _bincount(unique_mapping, minlength=num_classes**2)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torchmetrics\utilities\data.py", line 199, in _bincount
+    return torch.bincount(x, minlength=minlength)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

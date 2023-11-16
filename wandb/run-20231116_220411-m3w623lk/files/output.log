@@ -1,0 +1,44 @@
+
+  0%|                                                                                                                                                 | 0/10 [00:00<?, ?it/s]
+715
+Epoch: 1 | train_loss: 5.6103 | train_acc: 0.0025 | test_loss: 5.5682 | test_acc: 0.0059
+
+ 10%|█████████████▋                                                                                                                           | 1/10 [00:30<04:38, 30.95s/it]
+Traceback (most recent call last):
+  File "d:\AI\Skills\Paper\handsign_classification\main.py", line 38, in <module>
+    results = train.train(epochs=10, train_dataloader = train_dataloader, test_dataloader = val_dataloader)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\AI\Skills\Paper\handsign_classification\trainer\trainer.py", line 105, in train
+    train_loss, train_acc = self.train_epoch(dataloader = train_dataloader, device = self.device)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\AI\Skills\Paper\handsign_classification\trainer\trainer.py", line 58, in train_epoch
+    train_acc += Accuracy(y_pred_class, y).item()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torchmetrics\metric.py", line 298, in forward
+    self._forward_cache = self._forward_reduce_state_update(*args, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torchmetrics\metric.py", line 367, in _forward_reduce_state_update
+    self.update(*args, **kwargs)
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torchmetrics\metric.py", line 457, in wrapped_func
+    update(*args, **kwargs)
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torchmetrics\classification\stat_scores.py", line 322, in update
+    _multiclass_stat_scores_tensor_validation(
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torchmetrics\functional\classification\stat_scores.py", line 307, in _multiclass_stat_scores_tensor_validation
+    num_unique_values = len(torch.unique(target))
+                            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torch\_jit_internal.py", line 484, in fn
+    return if_false(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torch\_jit_internal.py", line 484, in fn
+    return if_false(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torch\functional.py", line 885, in _return_output
+    output, _, _ = _unique_impl(input, sorted, return_inverse, return_counts, dim)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torch\functional.py", line 799, in _unique_impl
+    output, inverse_indices, counts = torch._unique2(
+                                      ^^^^^^^^^^^^^^^
+KeyboardInterrupt

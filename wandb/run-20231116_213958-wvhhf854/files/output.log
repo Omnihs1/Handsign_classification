@@ -1,0 +1,4 @@
+
+  0%|                                                                                                                                                 | 0/10 [00:00<?, ?it/s]
+715
+Epoch: 1 | train_loss: 5.6065 | train_acc: 0.0038 | test_loss: 6.7188 | test_acc: 0.0059

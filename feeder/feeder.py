@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from torch.utils.data import Dataset
+from torch.utils.data import Dataset, DataLoader
 from pathlib import Path
 import numpy as np
 import pickle 
@@ -46,16 +46,20 @@ class FeederINCLUDE(Dataset):
         T : numbers of frames
         label : label of videos
         """
-        data_numpy = np.squeeze(np.array(self.data[index]))
+        data_numpy = np.array(self.data[index])
         label = self.label[index]
         return data_numpy, label
     
     def __len__(self):
-        return len(self.label_path)
+        return len(self.label)
     
 if __name__ == '__main__':
     data = FeederINCLUDE(data_path="data/npy_train.npy", label_path="data/label_train.pickle")
-    print(data.N, data.C, data.V, data.T, data.M)
-    rd_number = random.randint(0, 2860)
-    a, label = data.__getitem__(rd_number)
-    print(a.shape)
+    print(data.N, data.C, data.T, data.V, data.M)
+    print(data.data.shape)
+    print(data.__len__())
+    train_dataloader = DataLoader(data, batch_size=4, shuffle=True)
+
+    # rd_number = random.randint(0, 2860)
+    # a, label = data.__getitem__(rd_number)
+    # print(a.shape)
