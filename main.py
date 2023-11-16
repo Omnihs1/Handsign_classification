@@ -17,7 +17,13 @@ class Arg():
         self.epochs = args["epochs"]
 if __name__ == '__main__':
     device = "cuda" if torch.cuda.is_available() else "cpu"
+<<<<<<< HEAD
     model = Model(2, 263, graph_args = {"layout": "mediapipe"}, edge_importance_weighting=False).to(device)
+=======
+    print(device)
+    model = DG_STA(num_channels= 2, num_classes = 263, dp_rate = 0.2,
+                   time_len=80, joint_num=25).to(device)
+>>>>>>> 7059e24f033a5f97743eb075affa39f16356d804
     # model = Model(2, 263, graph_args = {"layout" :"mediapipe"}, edge_importance_weighting=False).to(device)
     args = {"experiment_name" : "INCLUDE_CLASSIFICATION",
             "model_name" : "ST_GCN",
