@@ -38,8 +38,8 @@ class PositionalEncoding(nn.Module):
                              -(math.log(10000.0) / ft_size))
         pe[:, 0::2] = torch.sin(position * div_term)
         pe[:, 1::2] = torch.cos(position * div_term)
-        # pe = pe.unsqueeze(0).cuda()
-        pe = pe.unsqueeze(0)
+        pe = pe.unsqueeze(0).cuda()
+        # pe = pe.unsqueeze(0)
         self.register_buffer('pe', pe)
 
     def forward(self, x):
@@ -116,10 +116,10 @@ class MultiHeadedAttention(nn.Module):
 
 
         I = torch.eye(self.time_len * self.joint_num)
-        # s_mask = Variable((1 - t_mask)).cuda()
-        # t_mask = Variable(t_mask + I).cuda()
-        s_mask = Variable((1 - t_mask))
-        t_mask = Variable(t_mask + I)
+        s_mask = Variable((1 - t_mask)).cuda()
+        t_mask = Variable(t_mask + I).cuda()
+        # s_mask = Variable((1 - t_mask))
+        # t_mask = Variable(t_mask + I)
         return t_mask, s_mask
 
 
@@ -248,7 +248,6 @@ class DG_STA(nn.Module):
         joint_num = x.shape[2]
         #reshape x
         x = x.reshape(-1, time_len * joint_num, self.channels)
-        
         #input map
         x = self.input_map(x)
         # print("Done 1 ")
