@@ -17,7 +17,8 @@ class Arg():
         self.epochs = args["epochs"]
 if __name__ == '__main__':
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    model = Model(2, 263, graph_args = {"layout": "mediapipe", "strategy": "spatial"}, edge_importance_weighting=True).to(device)
+    model = Model(2, 263, graph_args = {"layout": "mediapipe", "strategy": "spatial"}, edge_importance_weighting=True, 
+                 dropout = 0.5).to(device)
     # model = Model(2, 263, graph_args = {"layout" :"mediapipe"}, edge_importance_weighting=False).to(device)
     args = {"experiment_name" : "INCLUDE_CLASSIFICATION",
             "model_name" : "ST_GCN",
