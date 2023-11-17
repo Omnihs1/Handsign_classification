@@ -3,6 +3,7 @@ import os
 import numpy as np
 import wandb
 def init_wandb(args):
+    wandb.login()
     wandb.init(
         project="handsign_classification",
         config={
