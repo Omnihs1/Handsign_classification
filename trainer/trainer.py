@@ -1,4 +1,4 @@
-from utils import plot
+from utils import plot, early
 from writer import writer
 from metrics.accuracy import Accuracy
 import torch.nn as nn
@@ -14,6 +14,7 @@ class Trainer():
         self.weight_decay = args.weight_decay
         self.lr_rate = args.lr_rate
         self.epochs = args.epochs
+        self.early_stopping = early.EarlyStopping(path = "models/model1.pth")
         self.writer = writer.init_wandb(args)
         self.init_loss()
         self.init_optimizer()
@@ -28,10 +29,7 @@ class Trainer():
                                         weight_decay = self.weight_decay)
     def init_device(self):
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
-<<<<<<< HEAD
         # self.device = "cpu"
-=======
->>>>>>> 7059e24f033a5f97743eb075affa39f16356d804
     def train_epoch(self, dataloader, device):
         self.model.train()
         train_loss, train_acc = 0, 0
@@ -64,6 +62,7 @@ class Trainer():
     
         train_loss = train_loss / len(dataloader)
         train_acc = train_acc / len(dataloader)
+        
         return train_loss, train_acc
 
     def test_epoch(self, dataloader, device):
@@ -108,7 +107,6 @@ class Trainer():
         for epoch in tqdm(range(self.epochs), total=self.epochs):
             train_loss, train_acc = self.train_epoch(dataloader = train_dataloader, device = self.device)
             val_loss, val_acc = self.test_epoch(dataloader=test_dataloader, device=self.device)
-            
             # 4. Print out what's happening
             print(
                 f"\nEpoch: {epoch+1} | "
@@ -117,7 +115,10 @@ class Trainer():
                 f"test_loss: {val_loss:.4f} | "
                 f"test_acc: {val_acc:.4f}"
             )
-
+            self.early_stopping(val_loss, self.model)
+            if self.early_stopping.early_stop:
+                print("We are at epoch:", epoch)
+                break
             # 5. Update results dictionary
             results["train_loss"].append(train_loss)
             results["train_acc"].append(train_acc)

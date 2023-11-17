@@ -1,0 +1,81 @@
+
+
+  2%|██▋                                                                                                                                      | 1/50 [00:27<22:26, 27.47s/it]
+
+  4%|█████▍                                                                                                                                   | 2/50 [00:47<18:22, 22.97s/it]
+
+  6%|████████▏                                                                                                                                | 3/50 [01:07<17:03, 21.79s/it]
+Epoch: 3 | train_loss: 5.2506 | train_acc: 0.0089 | test_loss: 5.0598 | test_acc: 0.0183
+
+
+ 10%|█████████████▋                                                                                                                           | 5/50 [01:51<16:23, 21.85s/it]
+Epoch: 5 | train_loss: 5.0616 | train_acc: 0.0146 | test_loss: 4.8853 | test_acc: 0.0178
+
+
+ 14%|███████████████████▏                                                                                                                     | 7/50 [02:33<15:26, 21.54s/it]
+
+ 16%|█████████████████████▉                                                                                                                   | 8/50 [02:55<15:04, 21.54s/it]
+
+ 18%|████████████████████████▋                                                                                                                | 9/50 [03:16<14:34, 21.32s/it]
+Epoch: 9 | train_loss: 4.8618 | train_acc: 0.0216 | test_loss: 4.7039 | test_acc: 0.0331
+
+ 20%|███████████████████████████▏                                                                                                            | 10/50 [03:36<14:01, 21.04s/it]
+
+
+ 24%|████████████████████████████████▋                                                                                                       | 12/50 [04:19<13:29, 21.31s/it]
+
+ 26%|███████████████████████████████████▎                                                                                                    | 13/50 [04:40<12:58, 21.04s/it]
+Epoch: 13 | train_loss: 4.6585 | train_acc: 0.0348 | test_loss: 4.3843 | test_acc: 0.0469
+
+ 28%|██████████████████████████████████████                                                                                                  | 14/50 [05:01<12:37, 21.04s/it]
+
+ 30%|████████████████████████████████████████▊                                                                                               | 15/50 [05:21<12:02, 20.66s/it]
+
+
+ 34%|██████████████████████████████████████████████▏                                                                                         | 17/50 [06:00<11:02, 20.07s/it]
+
+ 36%|████████████████████████████████████████████████▉                                                                                       | 18/50 [06:19<10:38, 19.94s/it]
+Epoch: 18 | train_loss: 4.4732 | train_acc: 0.0506 | test_loss: 4.2442 | test_acc: 0.0655
+
+ 38%|███████████████████████████████████████████████████▋                                                                                    | 19/50 [06:39<10:15, 19.85s/it]
+
+
+ 42%|█████████████████████████████████████████████████████████                                                                               | 21/50 [07:18<09:31, 19.71s/it]
+
+ 44%|███████████████████████████████████████████████████████████▊                                                                            | 22/50 [07:38<09:11, 19.68s/it]
+ 44%|███████████████████████████████████████████████████████████▊                                                                            | 22/50 [07:53<10:03, 21.54s/it]
+Traceback (most recent call last):
+  File "d:\AI\Skills\Paper\handsign_classification\main.py", line 40, in <module>
+    results = train.train(train_dataloader = train_dataloader, test_dataloader = val_dataloader)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\AI\Skills\Paper\handsign_classification\trainer\trainer.py", line 106, in train
+    train_loss, train_acc = self.train_epoch(dataloader = train_dataloader, device = self.device)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\AI\Skills\Paper\handsign_classification\trainer\trainer.py", line 40, in train_epoch
+    y_pred = self.model(X)
+             ^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\AI\Skills\Paper\handsign_classification\net2\st_gcn.py", line 312, in forward
+    x, _ = gcn(x, self.A * importance)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\AI\Skills\Paper\handsign_classification\net2\st_gcn.py", line 423, in forward
+    res = self.residual(x)
+          ^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torch\nn\modules\container.py", line 217, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\asus\miniconda3\envs\projectAI\Lib\site-packages\torch\nn\modules\batchnorm.py", line 151, in forward
+    self.num_batches_tracked.add_(1)  # type: ignore[has-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

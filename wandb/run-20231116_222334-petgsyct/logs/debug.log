@@ -25,3 +25,10 @@ config: {'learning_rate': 0.0001, 'architecture': 'ST_GCN', 'dataset': 'INCLUDE'
 2023-11-16 22:23:39,555 INFO    MainThread:35240 [wandb_run.py:_redirect():2178] Redirects installed.
 2023-11-16 22:23:39,558 INFO    MainThread:35240 [wandb_init.py:init():841] run started, returning control to user process
 2023-11-16 22:23:39,559 INFO    MainThread:35240 [wandb_watch.py:watch():51] Watching
+2023-11-16 22:41:04,472 INFO    MainThread:35240 [wandb_run.py:_finish():1962] finishing run narutohehe2/handsign_classification/petgsyct
+2023-11-16 22:41:04,476 INFO    MainThread:35240 [wandb_run.py:_atexit_cleanup():2202] got exitcode: 0
+2023-11-16 22:41:04,478 INFO    MainThread:35240 [wandb_run.py:_restore():2185] restore
+2023-11-16 22:41:04,479 INFO    MainThread:35240 [wandb_run.py:_restore():2191] restore done
+2023-11-16 22:41:14,495 INFO    MainThread:35240 [wandb_run.py:_footer_history_summary_info():3760] rendering history
+2023-11-16 22:41:14,500 INFO    MainThread:35240 [wandb_run.py:_footer_history_summary_info():3792] rendering summary
+2023-11-16 22:41:14,522 INFO    MainThread:35240 [wandb_run.py:_footer_sync_info():3719] logging synced files

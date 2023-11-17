@@ -10,6 +10,7 @@ def init_wandb(args):
         "architecture": args.model_name,
         "dataset": "INCLUDE",
         "epochs": args.epochs,
+        "weight_decay" : args.weight_decay, 
         }
     )
     wandb.watch(args.model)
