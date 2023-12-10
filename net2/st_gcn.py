@@ -230,9 +230,11 @@ class ConvTemporalGraphical(nn.Module):
         assert A.size(0) == self.kernel_size
 
         x = self.conv(x)
-
+        # N * M, C, T, V
         n, kc, t, v = x.size()
+
         x = x.view(n, self.kernel_size, kc//self.kernel_size, t, v)
+        # (N, K, C, T, V) * (K, V, W) -> (N, C, T, V) (V == W)
         x = torch.einsum('nkctv,kvw->nctw', (x, A))
 
         return x.contiguous(), A
@@ -299,10 +301,12 @@ class Model(nn.Module):
 
     def forward(self, x):
         # data normalization
+        #0, 1, 2, 3, 4
         N, C, T, V, M = x.size()
         x = x.permute(0, 4, 3, 1, 2).contiguous()
         x = x.view(N * M, V * C, T)
         x = self.data_bn(x)
+        #          0, 1, 2, 3, 4
         x = x.view(N, M, V, C, T)
         x = x.permute(0, 1, 3, 4, 2).contiguous()
         x = x.view(N * M, C, T, V)
@@ -419,9 +423,12 @@ class st_gcn(nn.Module):
         self.relu = nn.ReLU(inplace=True)
 
     def forward(self, x, A):
-
+        
+        # N * M, C, T, V
         res = self.residual(x)
+        # N * M, C, T, V -> N*M, C, T, V
         x, A = self.gcn(x, A)
+        # N * M, C, T, V -> N*M, C, T, V
         x = self.tcn(x) + res
 
         return self.relu(x), A

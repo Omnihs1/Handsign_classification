@@ -3,9 +3,9 @@ import os
 import numpy as np
 import wandb
 def init_wandb(args):
-    wandb.login()
     wandb.init(
         project="handsign_classification",
+        name = "st-gcn",
         config={
         "learning_rate": args.lr_rate,
         "architecture": args.model_name,
@@ -18,8 +18,8 @@ def init_wandb(args):
 
 def writer_to_wandb(results, epoch, writer):
     wandb.log({"train_loss": results["train_loss"][-1], 
-               "test_loss": results["val_loss"][-1],
+               "val_loss": results["val_loss"][-1],
                "train_acc": results["train_acc"][-1],
-               "test_acc": results["val_acc"][-1]})
+               "val_acc": results["val_acc"][-1]})
 def end():
     wandb.finish()

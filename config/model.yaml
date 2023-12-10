@@ -1,17 +1,16 @@
-# A sample yaml file
----
-company : spacelift
-domain : 
-  - devops
-  - devsecops
-tutorial :
-  - yaml:
-      name : "YAML Ain't Markup Language"
-      type : awesome
-      born : 2001
-  - json:
-      name : JavaScript Object Notation
-      type : great
-      born : 2001
-author : HaSon
-published : True
+experiment_name : "INCLUDE_CLASSIFICATION"
+model_name : "ST_GCN"
+loss_name : "cross_entropy"
+optimizer_name : "adam"
+lr_rate : 0.0001
+weight_decay : 0.001
+batch_size : 4
+epochs: 50
+in_channels : 2
+out_channels : 8
+n_heads : 4
+classes : 263
+graph_args : 
+  layout: "mediapipe"
+  strategy: "spatial"
+edge_importance_weighting : True

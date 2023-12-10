@@ -1,44 +1,46 @@
+import yaml
+# from config.config import Arg
 from net2.st_gcn import Model
 from trainer.trainer import Trainer
 from feeder.feeder import FeederINCLUDE
 from torch.utils.data import DataLoader
 import torch
 from torchinfo import summary
-class Arg():
-    def __init__(self, args):
-        self.model = args["model"]
-        self.loss_name = args["loss_name"]
-        self.optimizer_name = args["optimizer_name"]
-        self.lr_rate = args["lr_rate"]
-        self.experiment_name = args["experiment_name"]
-        self.model_name = args["model_name"]
-        self.weight_decay = args["weight_decay"]
-        self.batch_size = args["batch_size"]
-        self.epochs = args["epochs"]
+from dataclasses import dataclass
+from typing import Type
+
+@dataclass
+class TrainConfig:
+    experiment_name: str = "INCLUDE_CLASSIFICATION"
+    model_name: str = "ST_GCN"
+    model: Type["Model"] = None
+    loss_name: str = "cross_entropy"
+    optimizer_name: str = "adam"
+    lr_rate: int = 1e-4
+    weight_decay: float = 1e-3
+    batch_size: int = 4
+    epochs: int = 50
+
 if __name__ == '__main__':
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    model = Model(2, 263, graph_args = {"layout": "mediapipe", "strategy": "spatial"}, edge_importance_weighting=True, 
-                 dropout = 0.5).to(device)
+    with open('config/model.yaml', 'r') as file:
+        config = yaml.safe_load(file)
+    
+    # model = Model(2, 263, graph_args = {"layout": "mediapipe", "strategy": "spatial"}, edge_importance_weighting=True, dropout = 0.2).to(device)
+    model = Model(config["in_channels"], config["classes"], graph_args = config["graph_args"], edge_importance_weighting=True).to(device)
     # model = Model(2, 263, graph_args = {"layout" :"mediapipe"}, edge_importance_weighting=False).to(device)
-    args = {"experiment_name" : "INCLUDE_CLASSIFICATION",
-            "model_name" : "ST_GCN",
-            "model" : model,
-            "loss_name" : "cross_entropy",
-            "optimizer_name" : "adam",
-            "lr_rate" : 0.0001,
-            "weight_decay" : 0.001, 
-            "batch_size" : 4,
-            "epochs": 50}
-    a = Arg(args)
+    config_train = TrainConfig(config["experiment_name"], config["model_name"], \
+                        model, config["loss_name"], config["optimizer_name"], \
+                        config["lr_rate"], config["weight_decay"], config["batch_size"], config["epochs"])
     train_dataset = FeederINCLUDE(data_path="data/npy_train.npy", label_path="data/label_train.pickle")
     test_dataset = FeederINCLUDE(data_path="data/npy_test.npy", label_path="data/label_test.pickle")
     val_dataset = FeederINCLUDE(data_path="data/npy_val.npy", label_path="data/label_val.pickle")
-    train_dataloader = DataLoader(train_dataset, batch_size=a.batch_size, shuffle=True)
-    test_dataloader = DataLoader(test_dataset, batch_size=a.batch_size, shuffle=False)
-    val_dataloader = DataLoader(val_dataset, batch_size=a.batch_size, shuffle=False)
-    train = Trainer(a)
-    # summary(model, input_size = (4, 2, 80, 25, 1), col_names = ["input_size", "output_size", "num_params"], device = device)
+    train_dataloader = DataLoader(train_dataset, batch_size=config_train.batch_size, shuffle=True)
+    test_dataloader = DataLoader(test_dataset, batch_size=config_train.batch_size, shuffle=False)
+    val_dataloader = DataLoader(val_dataset, batch_size=config_train.batch_size, shuffle=False)
+    train = Trainer(config_train)
+    summary(model, input_size = (4, 2, 80, 25, 1), col_names = ["input_size", "output_size", "num_params"], device = device)
     results = train.train(train_dataloader = train_dataloader, test_dataloader = val_dataloader)
     # Specify the file path to save the model
-    train.save_model("models/model1.pth")
+    train.save_model("models/model3.pth")
     print("Done")
