@@ -1,6 +1,6 @@
 import yaml
-# from config.config import Arg
 from net2.st_gcn import Model
+# from net2.st_gcn_attent import Model
 from trainer.trainer import Trainer
 from feeder.feeder import FeederINCLUDE
 from torch.utils.data import DataLoader
@@ -22,6 +22,17 @@ class TrainConfig:
     epochs: int = 50
 
 if __name__ == '__main__':
+    # seed = 42
+    # torch.manual_seed(seed)
+    # GPU operations have a separate seed we also want to set
+    # if torch.cuda.is_available():
+        # torch.cuda.manual_seed(42)
+        # torch.cuda.manual_seed_all(42)
+
+    # Additionally, some operations on a GPU are implemented stochastic for efficiency
+    # We want to ensure that all operations are deterministic on GPU (if used) for reproducibility
+    # torch.backends.cudnn.deterministic = True
+    # torch.backends.cudnn.benchmark = False
     device = "cuda" if torch.cuda.is_available() else "cpu"
     with open('config/model.yaml', 'r') as file:
         config = yaml.safe_load(file)
@@ -38,9 +49,10 @@ if __name__ == '__main__':
     train_dataloader = DataLoader(train_dataset, batch_size=config_train.batch_size, shuffle=True)
     test_dataloader = DataLoader(test_dataset, batch_size=config_train.batch_size, shuffle=False)
     val_dataloader = DataLoader(val_dataset, batch_size=config_train.batch_size, shuffle=False)
+    # model.load_state_dict(torch.load("models/model_13layer.pth"))
     train = Trainer(config_train)
     summary(model, input_size = (4, 2, 80, 25, 1), col_names = ["input_size", "output_size", "num_params"], device = device)
     results = train.train(train_dataloader = train_dataloader, test_dataloader = val_dataloader)
     # Specify the file path to save the model
-    train.save_model("models/model3.pth")
+    train.save_model("models/model_13layer.pth")
     print("Done")

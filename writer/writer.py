@@ -5,7 +5,7 @@ import wandb
 def init_wandb(args):
     wandb.init(
         project="handsign_classification",
-        name = "st-gcn",
+        name = "st-gcn_13layer",
         config={
         "learning_rate": args.lr_rate,
         "architecture": args.model_name,

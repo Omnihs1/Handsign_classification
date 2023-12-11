@@ -14,7 +14,7 @@ class Trainer():
         self.weight_decay = args.weight_decay
         self.lr_rate = args.lr_rate
         self.epochs = args.epochs
-        self.early_stopping = early.EarlyStopping(path = "models/model1.pth")
+        self.early_stopping = early.EarlyStopping(path = "models/model4.pth", patience=20)
         self.writer = writer.init_wandb(args)
         self.init_loss()
         self.init_optimizer()
