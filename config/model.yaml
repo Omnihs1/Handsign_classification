@@ -1,16 +1,18 @@
 experiment_name : "INCLUDE_CLASSIFICATION"
-model_name : "ST_GCN"
+model_name : "DeCoupling GCN"
 loss_name : "cross_entropy"
 optimizer_name : "adam"
 lr_rate : 0.0001
-weight_decay : 0.001
+weight_decay : 0.0001
 batch_size : 4
-epochs: 50
+epochs: 100
 in_channels : 2
 out_channels : 8
 n_heads : 4
 classes : 263
 graph_args : 
   layout: "mediapipe"
-  strategy: "spatial"
+  strategy: "distance"
 edge_importance_weighting : True
+save_path : "models/model7.pth"
+patience : 50

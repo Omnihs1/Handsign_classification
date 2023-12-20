@@ -4,63 +4,62 @@ import torch.nn.functional as F
 from torch.autograd import Variable
 import numpy as np
 import math
-from dropSke import DropBlock_Ske
-from dropT import DropBlockT_1d
+# from dropSke import DropBlock_Ske
+# from dropT import DropBlockT_1d
 from torchinfo import summary
+import warnings
 
-num_node = 25
-self_link = [(i, i) for i in range(num_node)]
-inward_ori_index = [(1, 2), (2, 21), (3, 21), (4, 3), (5, 21), (6, 5), (7, 6),
-                    (8, 7), (9, 21), (10, 9), (11, 10), (12, 11), (13, 1),
-                    (14, 13), (15, 14), (16, 15), (17, 1), (18, 17), (19, 18),
-                    (20, 19), (22, 23), (23, 8), (24, 25), (25, 12)]
-inward = [(i - 1, j - 1) for (i, j) in inward_ori_index]
-outward = [(j, i) for (i, j) in inward]
-neighbor = inward + outward
+class DropBlockT_1d(nn.Module):
+    def __init__(self, block_size=7):
+        super(DropBlockT_1d, self).__init__()
+        self.keep_prob = 0.0
+        self.block_size = block_size
 
+    def forward(self, input, keep_prob):
+        self.keep_prob = keep_prob
+        if not self.training or self.keep_prob == 1:
+            return input
+        n,c,t,v = input.size()
 
-class Graph:
-    def __init__(self, labeling_mode='spatial'):
-        self.A = self.get_adjacency_matrix(labeling_mode)
-        self.num_node = num_node
-        self.self_link = self_link
-        self.inward = inward
-        self.outward = outward
-        self.neighbor = neighbor
+        input_abs = torch.mean(torch.mean(torch.abs(input),dim=3),dim=1).detach()
+        input_abs = (input_abs/torch.sum(input_abs)*input_abs.numel()).view(n,1,t)
+        gamma = (1. - self.keep_prob) / self.block_size
+        input1 = input.permute(0,1,3,2).contiguous().view(n,c*v,t)
+        M = torch.bernoulli(torch.clamp(input_abs * gamma, max=1.0)).repeat(1,c*v,1)
+        Msum = F.max_pool1d(M, kernel_size=[self.block_size], stride=1, padding=self.block_size // 2)
+        mask = (1 - Msum).to(device=input.device, dtype=input.dtype)
+        return (input1 * mask * mask.numel() /mask.sum()).view(n,c,v,t).permute(0,1,3,2)
 
-    def get_adjacency_matrix(self, labeling_mode=None):
-        if labeling_mode is None:
-            return self.A
-        if labeling_mode == 'spatial':
-            A = get_spatial_graph(num_node, self_link, inward, outward)
+class DropBlock_Ske(nn.Module):
+    def __init__(self, num_point, block_size=7):
+        super(DropBlock_Ske, self).__init__()
+        self.keep_prob = 0.0
+        self.block_size = block_size
+        self.num_point = num_point
+
+    def forward(self, input, keep_prob, A):  # n,c,t,v
+        self.keep_prob = keep_prob
+        if not self.training or self.keep_prob == 1:
+            return input
+        n, c, t, v = input.size()
+
+        input_abs = torch.mean(torch.mean(
+            torch.abs(input), dim=2), dim=1).detach()
+        input_abs = input_abs / torch.sum(input_abs) * input_abs.numel()
+        if self.num_point == 25:  # Kinect V2
+            gamma = (1. - self.keep_prob) / (1 + 1.92)
+        elif self.num_point == 20:  # Kinect V1
+            gamma = (1. - self.keep_prob) / (1 + 1.9)
         else:
-            raise ValueError()
-        return A
-    
-def edge2mat(link, num_node):
-    A = np.zeros((num_node, num_node))
-    for i, j in link:
-        A[j, i] = 1
-    return A
-
-
-def normalize_digraph(A):  # 除以每列的和
-    Dl = np.sum(A, 0)
-    h, w = A.shape
-    Dn = np.zeros((w, w))
-    for i in range(w):
-        if Dl[i] > 0:
-            Dn[i, i] = Dl[i] ** (-1)
-    AD = np.dot(A, Dn)
-    return AD
-
-
-def get_spatial_graph(num_node, self_link, inward, outward):
-    I = edge2mat(self_link, num_node)
-    In = normalize_digraph(edge2mat(inward, num_node))
-    Out = normalize_digraph(edge2mat(outward, num_node))
-    A = np.stack((I, In, Out))
-    return A
+            gamma = (1. - self.keep_prob) / (1 + 1.92)
+            warnings.warn('undefined skeleton graph')
+        M_seed = torch.bernoulli(torch.clamp(
+            input_abs * gamma, max=1.0)).to(device=input.device, dtype=input.dtype)
+        M = torch.matmul(M_seed, A)
+        M[M > 0.001] = 1.0
+        M[M < 0.5] = 0.0
+        mask = (1 - M).view(n, 1, 1, self.num_point)
+        return input * mask * mask.numel() / mask.sum()
 
 def import_class(name):
     components = name.split('.')
@@ -183,11 +182,14 @@ class unit_gcn(nn.Module):
         return A
 
     def forward(self, x0):
+        # print("Koko ni aru")
         learn_A = self.DecoupleA.repeat(
             1, self.out_channels // self.groups, 1, 1)
         norm_learn_A = torch.cat([self.norm(learn_A[0:1, ...]), self.norm(
             learn_A[1:2, ...]), self.norm(learn_A[2:3, ...])], 0)
-
+        # print("x0shape: ", x0.shape)
+        # print("linearshape: ", self.Linear_weight.shape)
+        # print("in_channels", self.in_channels)
         x = torch.einsum(
             'nctw,cd->ndtw', (x0, self.Linear_weight)).contiguous()
         x = x + self.Linear_bias
@@ -211,6 +213,7 @@ class TCN_GCN_unit(nn.Module):
                              stride=stride, num_point=num_point)
         self.relu = nn.ReLU()
 
+        # Note số 3 
         self.A = nn.Parameter(torch.tensor(np.sum(np.reshape(A.astype(np.float32), [
                               3, num_point, num_point]), axis=0), dtype=torch.float32, requires_grad=False, device='cuda'), requires_grad=False)
 
@@ -223,25 +226,30 @@ class TCN_GCN_unit(nn.Module):
         else:
             self.residual = unit_tcn_skip(
                 in_channels, out_channels, kernel_size=1, stride=stride)
+            
+        # dropSke la gi ?
         self.dropSke = DropBlock_Ske(num_point=num_point)
+        # dropBlockT la gi ?
         self.dropT_skip = DropBlockT_1d(block_size=block_size)
 
     def forward(self, x, keep_prob):
-        x = self.tcn1(self.gcn1(x), keep_prob, self.A) + self.dropT_skip(
-            self.dropSke(self.residual(x), keep_prob, self.A), keep_prob)
+        x = self.tcn1(self.gcn1(x), keep_prob, self.A) + \
+            self.dropT_skip(self.dropSke(self.residual(x), keep_prob, self.A), keep_prob)
         return self.relu(x)
-
-
+    
+        
 class Model(nn.Module):
     def __init__(self, num_class=60, num_point=25, num_person=2, groups=8, block_size=41, graph_args=dict(), in_channels=3):
         super(Model, self).__init__()
-            
+
+
         self.graph = Graph(**graph_args)
 
         A = self.graph.A
         self.data_bn = nn.BatchNorm1d(num_person * in_channels * num_point)
-
-        self.l1 = TCN_GCN_unit(3, 64, A, groups, num_point,
+        
+        # what is block size ?
+        self.l1 = TCN_GCN_unit(in_channels, 64, A, groups, num_point,
                                block_size, residual=False)
         self.l2 = TCN_GCN_unit(64, 64, A, groups, num_point, block_size)
         self.l3 = TCN_GCN_unit(64, 64, A, groups, num_point, block_size)
@@ -280,17 +288,78 @@ class Model(nn.Module):
 
         # N*M,C,T,V
         c_new = x.size(1)
-        x = x.view(N, M, c_new, -1)
+        # print("xshape", x.shape)
+        x = x.reshape(N, M, c_new, -1)
         x = x.mean(3).mean(1)
 
         return self.fc(x)
+
+num_node = 25
+self_link = [(i, i) for i in range(num_node)]
+# inward_ori_index = [(1, 2), (2, 21), (3, 21), (4, 3), (5, 21), (6, 5), (7, 6),
+#                     (8, 7), (9, 21), (10, 9), (11, 10), (12, 11), (13, 1),
+#                     (14, 13), (15, 14), (16, 15), (17, 1), (18, 17), (19, 18),
+#                     (20, 19), (22, 23), (23, 8), (24, 25), (25, 12)]
+inward_ori_index = [(20, 18), (18, 16), (20, 16), (16, 22), (16, 14), (14, 12),
+                              (19, 17), (17, 15), (19, 15), (15, 21), (15, 13), (13, 11),
+                              (12, 11), (12, 24), (24, 23), (23, 11),
+                              (10, 9), 
+                              (0, 4), (4, 5), (5, 6), (6, 8),
+                              (0, 1), (1, 2), (2, 3), (3, 7)]
+inward = [(i - 1, j - 1) for (i, j) in inward_ori_index]
+outward = [(j, i) for (i, j) in inward]
+neighbor = inward + outward
+
+
+class Graph:
+    def __init__(self, labeling_mode='spatial'):
+        self.A = self.get_adjacency_matrix(labeling_mode)
+        self.num_node = num_node
+        self.self_link = self_link
+        self.inward = inward
+        self.outward = outward
+        self.neighbor = neighbor
+
+    def get_adjacency_matrix(self, labeling_mode=None):
+        if labeling_mode is None:
+            return self.A
+        if labeling_mode == 'spatial':
+            A = get_spatial_graph(num_node, self_link, inward, outward)
+        else:
+            raise ValueError()
+        return A
     
+def edge2mat(link, num_node):
+    A = np.zeros((num_node, num_node))
+    for i, j in link:
+        A[j, i] = 1
+    return A
+
+
+def normalize_digraph(A):  # 除以每列的和
+    Dl = np.sum(A, 0)
+    h, w = A.shape
+    Dn = np.zeros((w, w))
+    for i in range(w):
+        if Dl[i] > 0:
+            Dn[i, i] = Dl[i] ** (-1)
+    AD = np.dot(A, Dn)
+    return AD
+
+
+def get_spatial_graph(num_node, self_link, inward, outward):
+    I = edge2mat(self_link, num_node)
+    In = normalize_digraph(edge2mat(inward, num_node))
+    Out = normalize_digraph(edge2mat(outward, num_node))
+    A = np.stack((I, In, Out))
+    return A
+
 if __name__ == '__main__':
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    model = Model(num_class = 263, num_point= 25, num_person= 1, in_channels =2, graph_args={"labeling_mode": "spatial"}).to(device)
-    # model = Model().to(device)
-    # x = torch.randn((1, 3, 80, 25, 2)).to(device)
-    # y = model(x)
-    # print(y.shape)
-    # summary(model, input_size=(1,2,80,25,1), col_names=["input_size", "output_size", "num_params"])
-    summary(model)
+    model = Model(num_class=263, num_point=25, num_person=1, groups=8, block_size=41, \
+                  in_channels = 2, graph_args={"labeling_mode": "spatial"}).to(device)
+    x = torch.randn(2, 2, 80, 25, 1).to(device)
+    y = model(x)
+    print("yshape", y.shape)
+    print("Done")
+    # summary(model, input_size=(2, 2, 80, 25, 1), col_names=['input_size', 'output_size', 'num_params'], device = device)

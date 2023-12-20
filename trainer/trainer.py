@@ -14,7 +14,7 @@ class Trainer():
         self.weight_decay = args.weight_decay
         self.lr_rate = args.lr_rate
         self.epochs = args.epochs
-        self.early_stopping = early.EarlyStopping(path = "models/model4.pth", patience=20)
+        self.early_stopping = early.EarlyStopping(path = args.save_path, patience=args.patience)
         self.writer = writer.init_wandb(args)
         self.init_loss()
         self.init_optimizer()
@@ -62,7 +62,7 @@ class Trainer():
     
         train_loss = train_loss / len(dataloader)
         train_acc = train_acc / len(dataloader)
-        
+        torch.cuda.empty_cache()
         return train_loss, train_acc
 
     def test_epoch(self, dataloader, device):
