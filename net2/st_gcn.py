@@ -420,8 +420,8 @@ class st_gcn(nn.Module):
                 nn.BatchNorm2d(out_channels),
             )
 
-        self.relu = nn.ReLU(inplace=True)
-
+        # self.relu = nn.ReLU(inplace=True)
+        self.elu == nn.ELU(alpha = 1.0, inplace=True)
     def forward(self, x, A):
         
         # N * M, C, T, V
@@ -431,7 +431,7 @@ class st_gcn(nn.Module):
         # N * M, C, T, V -> N*M, C, T, V
         x = self.tcn(x) + res
 
-        return self.relu(x), A
+        return self.elu(x), A
     
 if __name__ == '__main__':
     # in_channels (int): Number of channels in the input data

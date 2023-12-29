@@ -1,7 +1,7 @@
 import yaml
-# from net2.st_gcn import Model
+from net2.st_gcn import Model
 # from net2.st_gcn_attent import Model
-from net3.decouple_gcn import Model
+# from net3.decouple_gcn import Model
 from trainer.trainer import Trainer
 from feeder.feeder import FeederINCLUDE
 from torch.utils.data import DataLoader
@@ -45,9 +45,9 @@ if __name__ == '__main__':
     
     # model = Model(2, 263, graph_args = {"layout": "mediapipe", "strategy": "spatial"}, edge_importance_weighting=True, dropout = 0.2).to(device)
     # model = Model(config["in_channels"], config["classes"], graph_args = config["graph_args"], edge_importance_weighting=True).to(device)
-    # model = Model(2, 263, graph_args = {"layout" :"mediapipe"}, edge_importance_weighting=False).to(device)
-    model = Model(num_class=263, num_point=25, num_person=1, groups=8, block_size=41, \
-                  in_channels = 2, graph_args={"labeling_mode": "spatial"}).to(device)
+    model = Model(2, 263, graph_args = {"layout" :"mediapipe"}, edge_importance_weighting=False).to(device)
+    # model = Model(num_class=263, num_point=25, num_person=1, groups=8, block_size=41, \
+    #               in_channels = 2, graph_args={"labeling_mode": "spatial"}).to(device)
     config_train = TrainConfig(config["experiment_name"], config["model_name"], \
                         model, config["loss_name"], config["optimizer_name"], \
                         config["lr_rate"], config["weight_decay"], config["batch_size"], \
@@ -60,11 +60,11 @@ if __name__ == '__main__':
     test_dataloader = DataLoader(test_dataset, batch_size=config_train.batch_size, shuffle=False)
     val_dataloader = DataLoader(val_dataset, batch_size=config_train.batch_size, shuffle=False)
     #pretrain 
-    model.load_state_dict(torch.load(config_train.save_path))
+    # model.load_state_dict(torch.load(config_train.save_path))
     #train
-    train = Trainer(config_train)
+    # train = Trainer(config_train)
     summary(model)
-    results = train.train(train_dataloader = train_dataloader, test_dataloader = val_dataloader)
+    # results = train.train(train_dataloader = train_dataloader, test_dataloader = val_dataloader)
     # Specify the file path to save the model
-    train.save_model(config_train.save_path)
+    # train.save_model(config_train.save_path)
     print("Done")
