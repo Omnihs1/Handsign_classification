@@ -62,9 +62,9 @@ if __name__ == '__main__':
     #pretrain 
     # model.load_state_dict(torch.load(config_train.save_path))
     #train
-    # train = Trainer(config_train)
+    train = Trainer(config_train)
     summary(model)
-    # results = train.train(train_dataloader = train_dataloader, test_dataloader = val_dataloader)
+    results = train.train(train_dataloader = train_dataloader, test_dataloader = val_dataloader)
     # Specify the file path to save the model
-    # train.save_model(config_train.save_path)
+    train.save_model(config_train.save_path)
     print("Done")
