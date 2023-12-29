@@ -285,6 +285,10 @@ class Model(nn.Module):
             st_gcn(128, 256, kernel_size, 2, **kwargs),
             st_gcn(256, 256, kernel_size, 1, **kwargs),
             st_gcn(256, 256, kernel_size, 1, **kwargs),
+
+            st_gcn(256, 512, kernel_size, 2, **kwargs),
+            st_gcn(512, 512, kernel_size, 1, **kwargs),
+            st_gcn(512, 512, kernel_size, 1, **kwargs),
         ))
 
         # initialize parameters for edge importance weighting
