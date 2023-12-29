@@ -421,7 +421,7 @@ class st_gcn(nn.Module):
             )
 
         # self.relu = nn.ReLU(inplace=True)
-        self.elu == nn.ELU(alpha = 1.0, inplace=True)
+        self.elu = nn.ELU(alpha = 1.0, inplace=True)
     def forward(self, x, A):
         
         # N * M, C, T, V
