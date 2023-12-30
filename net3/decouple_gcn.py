@@ -211,8 +211,8 @@ class TCN_GCN_unit(nn.Module):
         self.gcn1 = unit_gcn(in_channels, out_channels, A, groups, num_point)
         self.tcn1 = unit_tcn(out_channels, out_channels,
                              stride=stride, num_point=num_point)
-        self.relu = nn.ReLU()
-
+        # self.relu = nn.ReLU()
+        self.elu = nn.ELU(alpha = 1.0, inplace = True)
         # Note số 3 
         self.A = nn.Parameter(torch.tensor(np.sum(np.reshape(A.astype(np.float32), [
                               3, num_point, num_point]), axis=0), dtype=torch.float32, requires_grad=False, device='cuda'), requires_grad=False)
@@ -235,7 +235,7 @@ class TCN_GCN_unit(nn.Module):
     def forward(self, x, keep_prob):
         x = self.tcn1(self.gcn1(x), keep_prob, self.A) + \
             self.dropT_skip(self.dropSke(self.residual(x), keep_prob, self.A), keep_prob)
-        return self.relu(x)
+        return self.elu(x)
     
         
 class Model(nn.Module):
@@ -263,7 +263,11 @@ class Model(nn.Module):
         self.l9 = TCN_GCN_unit(256, 256, A, groups, num_point, block_size)
         self.l10 = TCN_GCN_unit(256, 256, A, groups, num_point, block_size)
 
-        self.fc = nn.Linear(256, num_class)
+        self.l11 = TCN_GCN_unit(256, 512, A, groups, num_point, block_size)
+        self.l12 = TCN_GCN_unit(256, 512, A, groups, num_point, block_size)
+        self.l13 = TCN_GCN_unit(256, 512, A, groups, num_point, block_size)
+        
+        self.fc = nn.Linear(512, num_class)
         nn.init.normal(self.fc.weight, 0, math.sqrt(2. / num_class))
         bn_init(self.data_bn, 1)
 
@@ -285,7 +289,10 @@ class Model(nn.Module):
         x = self.l8(x, keep_prob)
         x = self.l9(x, keep_prob)
         x = self.l10(x, keep_prob)
-
+        x = self.l11(x, keep_prob)
+        x = self.l12(x, keep_prob)
+        x = self.l13(x, keep_prob)
+        
         # N*M,C,T,V
         c_new = x.size(1)
         # print("xshape", x.shape)

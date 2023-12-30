@@ -1,11 +1,11 @@
 experiment_name : "INCLUDE_CLASSIFICATION"
-model_name : "DeCoupling GCN"
+model_name : "DeCoupling GCN 13 LAYER+ ELU "
 loss_name : "cross_entropy"
 optimizer_name : "adam"
 lr_rate : 0.0001
 weight_decay : 0.0001
 batch_size : 4
-epochs: 100
+epochs: 50
 in_channels : 2
 out_channels : 8
 n_heads : 4
@@ -14,5 +14,5 @@ graph_args :
   layout: "mediapipe"
   strategy: "distance"
 edge_importance_weighting : True
-save_path : "models/model7.pth"
+save_path : "models/model8.pth"
 patience : 50
