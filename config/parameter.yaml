@@ -1,0 +1,41 @@
+program : main.py
+method : bayes
+metric : 
+  name : val_acc
+  goal : maximize
+parameters :
+  lr_rate : 
+    min : 1e-6
+    max : 1e-4
+    distribution : "uniform"
+  weight_decay :
+    min : 1e-5
+    max : 0.1
+    distribution : "uniform"
+  graph_args : 
+    layout: "mediapipe"
+    strategy: ["distance", "spatial"]
+  batch_size : 
+    min : 2
+    max : 8
+    distribution : "uniform"
+  epochs : 5
+
+# experiment_name : "INCLUDE_CLASSIFICATION"
+# model_name : "DeCoupling GCN 13 LAYER+ ELU "
+# loss_name : "cross_entropy"
+# optimizer_name : "adam"
+# lr_rate : 0.0001
+# weight_decay : 0.0001
+# batch_size : 4
+# epochs: 50
+# in_channels : 2
+# out_channels : 8
+# n_heads : 4
+# classes : 263
+# graph_args : 
+#   layout: "mediapipe"
+#   strategy: "distance"
+# edge_importance_weighting : True
+# save_path : "models/model8.pth"
+# patience : 50
