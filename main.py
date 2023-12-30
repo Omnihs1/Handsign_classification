@@ -10,6 +10,7 @@ from torchinfo import summary
 from dataclasses import dataclass
 from typing import Type
 import os
+import wandb
 
 os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
 
@@ -40,19 +41,23 @@ if __name__ == '__main__':
     # torch.backends.cudnn.deterministic = True
     # torch.backends.cudnn.benchmark = False
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    with open('config/model.yaml', 'r') as file:
-        config = yaml.safe_load(file)
+    # with open('config/model.yaml', 'r') as file:
+    #     config = yaml.safe_load(file)
     
     # model = Model(2, 263, graph_args = {"layout": "mediapipe", "strategy": "spatial"}, edge_importance_weighting=True, dropout = 0.2).to(device)
     # model = Model(config["in_channels"], config["classes"], graph_args = config["graph_args"], edge_importance_weighting=True).to(device)
     # model = Model(2, 263, graph_args = {"layout" :"mediapipe"}, edge_importance_weighting=False).to(device)
     model = Model(num_class=263, num_point=25, num_person=1, groups=8, block_size=41, \
                   in_channels = 2, graph_args={"labeling_mode": "spatial"}).to(device)
-    config_train = TrainConfig(config["experiment_name"], config["model_name"], \
-                        model, config["loss_name"], config["optimizer_name"], \
-                        config["lr_rate"], config["weight_decay"], config["batch_size"], \
-                        config["epochs"], config["save_path"], config["patience"])
-    
+    # config_train = TrainConfig(config["experiment_name"], config["model_name"], \
+    #                     model, config["loss_name"], config["optimizer_name"], \
+    #                     config["lr_rate"], config["weight_decay"], config["batch_size"], \
+    #                     config["epochs"], config["save_path"], config["patience"])
+    config = wandb.config
+    config_train = TrainConfig(config.experiment_name, config.model_name, \
+                        model, config.loss_name, config.optimizer_name, \
+                        config.lr_rate, config.weight_decay, config.batch_size, \
+                        config.epochs, config.save_path, config.patience)
     train_dataset = FeederINCLUDE(data_path="data/npy_train.npy", label_path="data/label_train.pickle")
     test_dataset = FeederINCLUDE(data_path="data/npy_test.npy", label_path="data/label_test.pickle")
     val_dataset = FeederINCLUDE(data_path="data/npy_val.npy", label_path="data/label_val.pickle")

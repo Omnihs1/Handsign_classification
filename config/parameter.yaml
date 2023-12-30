@@ -13,14 +13,28 @@ parameters :
     max : 0.1
     distribution : "uniform"
   graph_args : 
-    layout: "mediapipe"
-    strategy: ["distance", "spatial"]
+    layout: 
+      value : "mediapipe"
+    strategy: 
+      values : ["distance", "spatial"]
   batch_size : 
     min : 2
     max : 8
     distribution : "uniform"
-  epochs : 5
-
+  epochs : 
+    value : 5
+  experiment_name : 
+    value : "INCLUDE_CLASSIFICATION"
+  model_name : 
+    value : "ST GCN 13 LAYER+ ELU "
+  loss_name : 
+    value : "cross_entropy"
+  optimizer_name : 
+    value : "adam"
+  save_path : 
+    value : "models/model8.pth"
+  patience : 
+    value : 50
 # experiment_name : "INCLUDE_CLASSIFICATION"
 # model_name : "DeCoupling GCN 13 LAYER+ ELU "
 # loss_name : "cross_entropy"
